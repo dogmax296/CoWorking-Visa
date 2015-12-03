@@ -15,6 +15,21 @@
 		
 }
 
+// Quotes
+
+@mixin quotes{
+	
+	&:before{
+		content:"\00ab";
+	}
+				
+	&:after{
+		content:"\00bb";
+	}
+}
+
+
+
 // PADDING
 
 @mixin padding-custom($padding-top, $padding-right, $padding-bottom, $padding-left){

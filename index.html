@@ -16,52 +16,55 @@
 
 		<div class="wrapper">
 
-			<!-- START nav -->
-			
-			<nav  class="nav affix-top" data-spy="affix" data-offset-top="20" data-offset-bottom="200">
+			<header class="header">
 
-				<!-- START logo -->
-
-				<a class="logo" href="#">
-					
-					<img class="logo-img img-responsive" src="images/logo.png">
-					<img class="logo-img--hover img-responsive"  src="images/logo-hover.png">
-
-				</a>
-
-				<!-- END logo -->
-
-				<!-- START main-navbar -->
-
-				<div id="main-navbar" class="main-navbar">
-
-					<!-- START nav- -main -->
-
-					<ul class="nav nav-tabs main-nav" role="tablist">
-				      
-				      <li class="active main-nav__item">
-
-				      	<a class="main-nav__link" href="#">О проекте</a>
-
-				      </li>
-
-				      <li class="main-nav__item">
-
-				      	<a class="main-nav__link" href="#">Участники проекта</a>
-
-				      </li>
-
-				    </ul>
-
-				    <!-- END nav- -main -->
-
-				</div>
-
-				<!-- END main-navbar -->
+				<!-- START nav -->
 				
-			</nav>
+				<nav  class="main-nav-holder affix-top" data-spy="affix" data-offset-top="20" data-offset-bottom="200">
 
-			<!-- END nav -->
+					<!-- START logo -->
+
+					<a class="logo" href="#">
+						
+						<img class="logo-img img-responsive" src="images/logo.png">
+						<img class="logo-img--hover img-responsive"  src="images/logo-hover.png">
+
+					</a>
+
+					<!-- END logo -->
+
+					<!-- START main-navbar -->
+
+					<div id="main-navbar" class="main-navbar">
+
+						<!-- START nav- -main -->
+
+						<ul class="nav nav-tabs main-nav" role="tablist">
+					      
+					      <li class="active main-nav__item">
+
+					      	<a class="main-nav__link smoothclick" href="#about">О проекте</a>
+
+					      </li>
+
+					      <li class="main-nav__item">
+
+					      	<a class="main-nav__link smoothclick" href="#participants">Участники проекта</a>
+
+					      </li>
+
+					    </ul>
+
+					    <!-- END nav- -main -->
+
+					</div>
+
+					<!-- END main-navbar -->
+					
+				</nav>
+
+				<!-- END nav -->
+			</header>
 
 			<!-- START main -->
 
@@ -73,7 +76,7 @@
 
 					<!-- START about -->
 
-					<div class="about">
+					<div class="about" id="about">
 
 						<!-- START row -->
 						
@@ -106,7 +109,7 @@
 
 									</div>
 
-									<a href="" class="btn btn-info about__btn">Посмотреть учасников проекта</a>
+									<a href="#participants" class="smoothclick btn about__btn">Посмотреть учасников проекта</a>
 									
 								</div>
 
@@ -245,6 +248,585 @@
 					</div>
 
 					<!-- END about -->
+
+					<!-- START participants -->
+
+					<div class="participants" id="participants">
+												
+						<div class="participants__header">
+
+							<div class="row">
+
+								<div class="col-lg-13 col-lg-offset-1">
+
+									<div class="row">
+
+										<div class="col-lg-6">
+
+											<h2 class="heading__sub participants__heading">Учасники проекта</h2>
+
+										</div>
+
+										<div class="col-lg-8 col-lg-offset-1">
+
+											<div class="participants__checkboxes">
+										
+												<form action="">
+												
+													<input type="checkbox" name="city" value="kharkov" id="kharkov"><label for="kharkov">Харьков</label>
+
+													<input type="checkbox" name="city" value="kiev" id="kiev"><label for="kiev">Киев</label>
+
+													<input type="checkbox" name="city" value="lvov" id="lvov"><label for="lvov">Львов</label>
+
+													<input type="checkbox" name="city" value="odessa" id="odessa"><label for="odessa">Одесса</label>
+
+													<input type="checkbox" name="city" value="minsk" id="minsk"><label for="minsk">Минск</label>
+
+												</form>
+
+											</div>
+
+										</div>
+
+									</div>
+
+									
+																
+									
+
+
+								</div>
+								
+							</div>
+																											
+						</div>
+
+						<div class="participants__grid">
+							
+							<div class="row">
+
+								<div class="col-lg-14 col-lg-offset-1">
+
+									<div class="row">
+
+										<div class="col-lg-4">
+
+											<div class="participants__item">
+
+												<div class="participants__item__heading-holder">
+
+													<h3 class="heading__small participants__item__heading">Spalah</h3>
+
+												</div>
+												
+												
+
+												<ul class="participants__list">
+													
+													<li class="participants__list__item">
+
+														Адрес:
+
+														<div class="participants__list__item__content">г. Харьков, ул. Демченко 6</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Время работы:
+
+														<div class="participants__list__item__content">пн-пт: 9:00-21:00,<br>
+
+															сб-вс: 11:00-18:00</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Контакты:
+
+														<div  class="participants__list__item__content">тел.: +380 (63) 295 34 64<br>
+
+															web: <a href="http://spalah.com/" target="_blank" class="participants__list__item__link">spalah.com</a></div>
+
+													</li>
+
+												</ul>
+
+												<div class="participants__btn-holder">
+
+													<button class="btn participants__btn">Забронировать место</button>
+
+												</div>
+
+												
+											</div>
+
+
+										</div>
+
+										<div class="col-lg-4 col-lg-offset-1">
+
+											<div class="participants__item">
+
+												<div class="participants__item__heading-holder">
+
+													<h3 class="heading__small participants__item__heading">Spalah</h3>
+
+												</div>
+												
+												
+
+												<ul class="participants__list">
+													
+													<li class="participants__list__item">
+
+														Адрес:
+
+														<div class="participants__list__item__content">г. Харьков, ул. Демченко 6</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Время работы:
+
+														<div class="participants__list__item__content">пн-пт: 9:00-21:00,<br>
+
+															сб-вс: 11:00-18:00</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Контакты:
+
+														<div  class="participants__list__item__content">тел.: +380 (63) 295 34 64<br>
+
+															web: <a href="http://spalah.com/" target="_blank" class="participants__list__item__link">spalah.com</a></div>
+
+													</li>
+
+												</ul>
+
+												<div class="participants__btn-holder">
+
+													<button class="btn participants__btn">Забронировать место</button>
+
+												</div>
+
+												
+											</div>
+
+										</div>
+
+										<div class="col-lg-4 col-lg-offset-1">
+
+											<div class="participants__item">
+
+												<div class="participants__item__heading-holder">
+
+													<h3 class="heading__small participants__item__heading">Spalah</h3>
+
+												</div>
+												
+												
+
+												<ul class="participants__list">
+													
+													<li class="participants__list__item">
+
+														Адрес:
+
+														<div class="participants__list__item__content">г. Харьков, ул. Демченко 6</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Время работы:
+
+														<div class="participants__list__item__content">пн-пт: 9:00-21:00,<br>
+
+															сб-вс: 11:00-18:00</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Контакты:
+
+														<div  class="participants__list__item__content">тел.: +380 (63) 295 34 64<br>
+
+															web: <a href="http://spalah.com/" target="_blank" class="participants__list__item__link">spalah.com</a></div>
+
+													</li>
+
+												</ul>
+
+												<div class="participants__btn-holder">
+
+													<button class="btn participants__btn">Забронировать место</button>
+
+												</div>
+
+												
+											</div>
+
+										</div>
+
+									</div>
+
+									<div class="row">
+
+										<div class="col-lg-4">
+
+											<div class="participants__item">
+
+												<div class="participants__item__heading-holder">
+
+													<h3 class="heading__small participants__item__heading">Spalah</h3>
+
+												</div>
+												
+												
+
+												<ul class="participants__list">
+													
+													<li class="participants__list__item">
+
+														Адрес:
+
+														<div class="participants__list__item__content">г. Харьков, ул. Демченко 6</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Время работы:
+
+														<div class="participants__list__item__content">пн-пт: 9:00-21:00,<br>
+
+															сб-вс: 11:00-18:00</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Контакты:
+
+														<div  class="participants__list__item__content">тел.: +380 (63) 295 34 64<br>
+
+															web: <a href="http://spalah.com/" target="_blank" class="participants__list__item__link">spalah.com</a></div>
+
+													</li>
+
+												</ul>
+
+												<div class="participants__btn-holder">
+
+													<button class="btn participants__btn">Забронировать место</button>
+
+												</div>
+
+												
+											</div>
+
+
+										</div>
+
+										<div class="col-lg-4 col-lg-offset-1">
+											
+											<div class="participants__item">
+
+												<div class="participants__item__heading-holder">
+
+													<h3 class="heading__small participants__item__heading">Spalah</h3>
+
+												</div>
+												
+												
+
+												<ul class="participants__list">
+													
+													<li class="participants__list__item">
+
+														Адрес:
+
+														<div class="participants__list__item__content">г. Харьков, ул. Демченко 6</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Время работы:
+
+														<div class="participants__list__item__content">пн-пт: 9:00-21:00,<br>
+
+															сб-вс: 11:00-18:00</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Контакты:
+
+														<div  class="participants__list__item__content">тел.: +380 (63) 295 34 64<br>
+
+															web: <a href="http://spalah.com/" target="_blank" class="participants__list__item__link">spalah.com</a></div>
+
+													</li>
+
+												</ul>
+
+												<div class="participants__btn-holder">
+
+													<button class="btn participants__btn">Забронировать место</button>
+
+												</div>
+
+												
+											</div>
+
+										</div>
+
+										<div class="col-lg-4 col-lg-offset-1">
+
+											<div class="participants__item">
+
+												<div class="participants__item__heading-holder">
+
+													<h3 class="heading__small participants__item__heading">Spalah</h3>
+
+												</div>
+												
+												
+
+												<ul class="participants__list">
+													
+													<li class="participants__list__item">
+
+														Адрес:
+
+														<div class="participants__list__item__content">г. Харьков, ул. Демченко 6</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Время работы:
+
+														<div class="participants__list__item__content">пн-пт: 9:00-21:00,<br>
+
+															сб-вс: 11:00-18:00</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Контакты:
+
+														<div  class="participants__list__item__content">тел.: +380 (63) 295 34 64<br>
+
+															web: <a href="http://spalah.com/" target="_blank" class="participants__list__item__link">spalah.com</a></div>
+
+													</li>
+
+												</ul>
+
+												<div class="participants__btn-holder">
+
+													<button class="btn participants__btn">Забронировать место</button>
+
+												</div>
+
+												
+											</div>
+
+										</div>
+
+									</div>
+
+									<div class="row">
+
+										<div class="col-lg-4">
+
+											<div class="participants__item">
+
+												<div class="participants__item__heading-holder">
+
+													<h3 class="heading__small participants__item__heading">Spalah</h3>
+
+												</div>
+												
+												
+
+												<ul class="participants__list">
+													
+													<li class="participants__list__item">
+
+														Адрес:
+
+														<div class="participants__list__item__content">г. Харьков, ул. Демченко 6</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Время работы:
+
+														<div class="participants__list__item__content">пн-пт: 9:00-21:00,<br>
+
+															сб-вс: 11:00-18:00</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Контакты:
+
+														<div  class="participants__list__item__content">тел.: +380 (63) 295 34 64<br>
+
+															web: <a href="http://spalah.com/" target="_blank" class="participants__list__item__link">spalah.com</a></div>
+
+													</li>
+
+												</ul>
+
+												<div class="participants__btn-holder">
+
+													<button class="btn participants__btn">Забронировать место</button>
+
+												</div>
+
+												
+											</div>
+
+
+										</div>
+
+										<div class="col-lg-4 col-lg-offset-1">
+											
+											<div class="participants__item">
+
+												<div class="participants__item__heading-holder">
+
+													<h3 class="heading__small participants__item__heading">Spalah</h3>
+
+												</div>
+												
+												
+
+												<ul class="participants__list">
+													
+													<li class="participants__list__item">
+
+														Адрес:
+
+														<div class="participants__list__item__content">г. Харьков, ул. Демченко 6</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Время работы:
+
+														<div class="participants__list__item__content">пн-пт: 9:00-21:00,<br>
+
+															сб-вс: 11:00-18:00</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Контакты:
+
+														<div  class="participants__list__item__content">тел.: +380 (63) 295 34 64<br>
+
+															web: <a href="http://spalah.com/" target="_blank" class="participants__list__item__link">spalah.com</a></div>
+
+													</li>
+
+												</ul>
+
+												<div class="participants__btn-holder">
+
+													<button class="btn participants__btn">Забронировать место</button>
+
+												</div>
+
+												
+											</div>
+
+										</div>
+
+										<div class="col-lg-4 col-lg-offset-1">
+
+											<div class="participants__item">
+
+												<div class="participants__item__heading-holder">
+
+													<h3 class="heading__small participants__item__heading">Spalah</h3>
+
+												</div>
+												
+												
+
+												<ul class="participants__list">
+													
+													<li class="participants__list__item">
+
+														Адрес:
+
+														<div class="participants__list__item__content">г. Харьков, ул. Демченко 6</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Время работы:
+
+														<div class="participants__list__item__content">пн-пт: 9:00-21:00,<br>
+
+															сб-вс: 11:00-18:00</div>
+
+													</li>
+
+													<li class="participants__list__item">
+
+														Контакты:
+
+														<div  class="participants__list__item__content">тел.: +380 (63) 295 34 64<br>
+
+															web: <a href="http://spalah.com/" target="_blank" class="participants__list__item__link">spalah.com</a></div>
+
+													</li>
+
+												</ul>
+
+												<div class="participants__btn-holder">
+
+													<button class="btn participants__btn">Забронировать место</button>
+
+												</div>
+
+												
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+												
+					</div>
+
+					<!-- END participants -->
 
 				</div>
 

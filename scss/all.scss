@@ -18,13 +18,16 @@
 
 
 body{
+
 	position: relative;
+	// height:100%;
+	// overflow:hidden;
 }
 
 .wrapper{
 
 	@include margin-custom(40px, 54px, 40px, 54px);
-	height:500px;
+	
 	background: url(../images/texture.png) repeat;
 	position: relative;
 }
@@ -50,10 +53,21 @@ body{
 	}
 }
 
+// HEADER
+
+.header{
+
+	position: absolute;
+    display: inline-block;
+    left: 20px;
+    top: 20px;
+}
+
 // LOGO
 
 .logo{
 	display: inline-block;
+	vertical-align: top;
 	width: 318px;
 	position: relative;
 	
@@ -88,13 +102,24 @@ body{
 // NAVIGATION
 
 .main-navbar{
+
 	display: inline-block;
+	vertical-align: top;
+	@include margin-horizontal(0, 210px);
 }
 
 .main-nav{
 
 	margin-top:0;
 	border:none;
+	
+	&-holder{
+
+		display: inline-block;
+	    background: url(../images/texture.png) repeat;
+	    @include padding-custom(0, 15px, 20px, 0);
+	    z-index: 2000;
+	}
 	
 	.main-nav{
 
@@ -166,6 +191,8 @@ body{
 
 .main{
 
+	@include padding-vertical(50px, 0);
+
 	&__border{
 
 		border: 1px solid $brand-success;
@@ -203,6 +230,7 @@ body{
 		border-radius: 0;
 		transition: all 0.3s;
 		&:hover,
+		&:active,
 		&:focus{
 			border: 1px solid $brand-primary;
 			background-color: $brand-primary;
@@ -240,14 +268,8 @@ body{
 
 			&__name{
 				@include font($font-family-seldom,normal,15px,$gray);
+				@include quotes
 				
-				&:before{
-					content:"\00ab";
-				};
-				
-				&:after{
-					content:"\00bb";
-				}
 			}
 		}
 	}
@@ -291,4 +313,105 @@ body{
 			background-color: $brand-primary;
 		}
 	}
+}
+
+
+// PARTICIPANTS
+
+.participants{
+
+	margin-top:300px;
+	
+	&__heading{
+		margin:0;
+	}
+	
+	&__checkboxes{
+		float: right;
+	}
+	&__item{
+
+		border: 2px solid $gray-base;
+		transition: all 0.3s;
+		@include margin-vertical(0, 50px);
+		
+		&__heading{
+			@include quotes;
+			margin: 0;
+			
+			&-holder{
+				text-align: center;
+			}
+		}
+
+		&:hover,
+		&:focus{
+			border: 2px solid $brand-primary;
+			cursor:pointer;
+			
+			.participants{
+				&__btn{
+					
+					border: 1px solid $brand-primary;
+					background-color: $brand-primary;
+					color: $gray-lighter;
+				}
+			}
+		}
+	}
+
+	&__list{
+
+		&__item{
+
+			@include font($font-family-main,$font-weight-main,20px,$gray-light);
+			
+			&__content{
+				color: $gray-base;
+			}
+
+			&__link{
+
+				border-bottom:1px dashed;
+				color: $brand-warning;
+				
+				&:hover,
+				&:focus,
+				&:active{
+
+					border-bottom:1px dashed;
+					color: $brand-warning;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	&__btn{
+
+		background-color: transparent;
+		border: 1px solid $gray-base;
+		border-radius:0;
+		box-shadow:none;
+		@include font($font-family-main,$font-weight-main,20px,$gray-base);
+		transition: all 0.3s;
+		
+		&:hover,
+		&:active,
+		&:focus{
+			outline:none;
+			box-shadow:none;
+		}
+
+		&:active:focus{
+
+			outline:none;
+		}
+		
+		&-holder{
+			text-align: center;
+		}
+	}
+	
+	
 }

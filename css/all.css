@@ -2445,29 +2445,29 @@ fieldset[disabled] .btn-info.active {
 
 .btn-warning {
   color: #fff;
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: #3636fa;
+  border-color: #1d1df9;
 }
 
 .btn-warning:focus,
 .btn-warning.focus {
   color: #fff;
-  background-color: #ec971f;
-  border-color: #985f0d;
+  background-color: #0606f7;
+  border-color: #040493;
 }
 
 .btn-warning:hover {
   color: #fff;
-  background-color: #ec971f;
-  border-color: #d58512;
+  background-color: #0606f7;
+  border-color: #0505d4;
 }
 
 .btn-warning:active,
 .btn-warning.active,
 .open > .btn-warning.dropdown-toggle {
   color: #fff;
-  background-color: #ec971f;
-  border-color: #d58512;
+  background-color: #0606f7;
+  border-color: #0505d4;
 }
 
 .btn-warning:active:hover,
@@ -2480,8 +2480,8 @@ fieldset[disabled] .btn-info.active {
 .open > .btn-warning.dropdown-toggle:focus,
 .open > .btn-warning.dropdown-toggle.focus {
   color: #fff;
-  background-color: #d58512;
-  border-color: #985f0d;
+  background-color: #0505d4;
+  border-color: #040493;
 }
 
 .btn-warning:active,
@@ -2508,12 +2508,12 @@ fieldset[disabled] .btn-warning:focus,
 fieldset[disabled] .btn-warning.focus,
 fieldset[disabled] .btn-warning:active,
 fieldset[disabled] .btn-warning.active {
-  background-color: #f0ad4e;
-  border-color: #eea236;
+  background-color: #3636fa;
+  border-color: #1d1df9;
 }
 
 .btn-warning .badge {
-  color: #f0ad4e;
+  color: #3636fa;
   background-color: #fff;
 }
 
@@ -2624,7 +2624,7 @@ fieldset[disabled] .btn-link {
 .btn-link[disabled]:focus,
 fieldset[disabled] .btn-link:hover,
 fieldset[disabled] .btn-link:focus {
-  color: #999;
+  color: #979797;
   text-decoration: none;
 }
 
@@ -2736,12 +2736,12 @@ tbody.collapse.in {
 }
 
 .nav > li.disabled > a {
-  color: #999;
+  color: #979797;
 }
 
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
-  color: #999;
+  color: #979797;
   text-decoration: none;
   background-color: transparent;
   cursor: not-allowed;
@@ -3408,7 +3408,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-inverse .navbar-brand {
-  color: #bfbfbf;
+  color: #bdbdbd;
 }
 
 .navbar-inverse .navbar-brand:hover,
@@ -3418,11 +3418,11 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-inverse .navbar-text {
-  color: #bfbfbf;
+  color: #bdbdbd;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #bfbfbf;
+  color: #bdbdbd;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -3478,7 +3478,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     background-color: #090909;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-    color: #bfbfbf;
+    color: #bdbdbd;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -3500,7 +3500,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-inverse .navbar-link {
-  color: #bfbfbf;
+  color: #bdbdbd;
 }
 
 .navbar-inverse .navbar-link:hover {
@@ -3508,7 +3508,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 
 .navbar-inverse .btn-link {
-  color: #bfbfbf;
+  color: #bdbdbd;
 }
 
 .navbar-inverse .btn-link:hover,
@@ -4012,7 +4012,6 @@ body {
   margin-right: 54px;
   margin-bottom: 40px;
   margin-left: 54px;
-  height: 500px;
   background: url(../images/texture.png) repeat;
   position: relative;
 }
@@ -4038,8 +4037,16 @@ body {
   color: #000;
 }
 
+.header {
+  position: absolute;
+  display: inline-block;
+  left: 20px;
+  top: 20px;
+}
+
 .logo {
   display: inline-block;
+  vertical-align: top;
   width: 318px;
   position: relative;
 }
@@ -4070,11 +4077,24 @@ body {
 
 .main-navbar {
   display: inline-block;
+  vertical-align: top;
+  margin-right: 0;
+  margin-left: 210px;
 }
 
 .main-nav {
   margin-top: 0;
   border: none;
+}
+
+.main-nav-holder {
+  display: inline-block;
+  background: url(../images/texture.png) repeat;
+  padding-top: 0;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 0;
+  z-index: 2000;
 }
 
 .main-nav .main-nav__link {
@@ -4131,6 +4151,11 @@ body {
           transition: all 0.3s;
 }
 
+.main {
+  padding-top: 50px;
+  padding-bottom: 0;
+}
+
 .main__border {
   border: 1px solid #c6c6c6;
 }
@@ -4163,6 +4188,7 @@ body {
 }
 
 .about__btn:hover,
+.about__btn:active,
 .about__btn:focus {
   border: 1px solid #33c6f4;
   background-color: #33c6f4;
@@ -4242,6 +4268,107 @@ body {
 
 .owl-dot.active {
   background-color: #33c6f4;
+}
+
+.participants {
+  margin-top: 300px;
+}
+
+.participants__heading {
+  margin: 0;
+}
+
+.participants__checkboxes {
+  float: right;
+}
+
+.participants__item {
+  border: 2px solid #000;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.participants__item__heading {
+  margin: 0;
+}
+
+.participants__item__heading:before {
+  content: "\00ab";
+}
+
+.participants__item__heading:after {
+  content: "\00bb";
+}
+
+.participants__item__heading-holder {
+  text-align: center;
+}
+
+.participants__item:hover,
+.participants__item:focus {
+  border: 2px solid #33c6f4;
+  cursor: pointer;
+}
+
+.participants__item:hover .participants__btn,
+.participants__item:focus .participants__btn {
+  border: 1px solid #33c6f4;
+  background-color: #33c6f4;
+  color: white;
+}
+
+.participants__list__item {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 20px;
+  color: #979797;
+}
+
+.participants__list__item__content {
+  color: #000;
+}
+
+.participants__list__item__link {
+  border-bottom: 1px dashed;
+  color: #3636fa;
+}
+
+.participants__list__item__link:hover,
+.participants__list__item__link:focus,
+.participants__list__item__link:active {
+  border-bottom: 1px dashed;
+  color: #3636fa;
+  text-decoration: none;
+}
+
+.participants__btn {
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 20px;
+  color: #000;
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+
+.participants__btn:hover,
+.participants__btn:active,
+.participants__btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.participants__btn:active:focus {
+  outline: none;
+}
+
+.participants__btn-holder {
+  text-align: center;
 }
 
 /*# sourceMappingURL=all.css.map */
