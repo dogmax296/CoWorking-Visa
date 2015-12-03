@@ -1,6 +1,4 @@
 
-
-
 // Custom Variables and Mixins
 
 @import "style/variables.scss";
@@ -21,6 +19,116 @@ body{
 
 .wrapper{
 
-	margin:40px 50px;	
+	@include margin-custom(40px, 54px, 40px, 54px);
+	height:500px;
+	background: url(../images/texture.png) repeat;
+	position: relative;
 }
 
+// LOGO
+
+.logo{
+	float: left;
+	width: 318px;
+	position: relative;
+	
+	&:hover,
+	&:focus{
+		.logo{
+			&-img{
+				opacity: 0;
+				&--hover{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	
+	
+	&-img{
+		
+		opacity:1;
+		transition: all 0.3s;
+
+		&--hover{
+			position: absolute;
+			top:0;
+			opacity: 0;
+			transition: all 0.3s;
+		}
+	}
+	
+}
+
+// NAVIGATION
+
+.main-nav{
+
+	margin-top:0;
+	border:none;
+	
+	.main-nav{
+
+		&__link{
+			border: none;
+			&:hover,
+			&:focus{
+				background-color: transparent;
+				color: $brand-primary;
+				
+				&:after{
+					background: $brand-primary;
+				}
+			}
+
+		}
+
+	}
+
+	&__item{
+
+		&.active{
+
+
+			.main-nav{
+
+				&__link{
+					color: $brand-primary;
+					border: none;
+					background-color: transparent;
+					&:hover,
+					&:focus{
+						border: none;
+						background-color: transparent;
+						color: $brand-primary;
+						
+					}
+
+					&:after{
+						content:"";
+						display: block;
+						height: 2px;
+						width: 20px;
+						background: $brand-primary;
+					}
+				}
+			}
+		}
+		
+	}
+	
+	&__link{
+
+		@include font($font-family-rare,20px,$gray-base);
+		transition: all 0.3s;
+		&:after{
+			content:"";
+			display: block;
+			height: 2px;
+			background: transparent;
+			transition: all 0.3s;
+		}
+		
+		
+	}
+}

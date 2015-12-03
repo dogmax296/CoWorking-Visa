@@ -7,11 +7,11 @@
 
 // FONT
 
-@mixin font($family,$size,$color,$text-transform){
+@mixin font($family,$size,$color){
 	font-family:$family;
 	font-size:$size;
 	color:$color;
-	text-transform: $text-transform;	
+		
 }
 
 // PADDING
