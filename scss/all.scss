@@ -8,6 +8,10 @@
 
 @import "font.scss";
 
+// OWL carousel
+
+@import "owl.carousel.scss";
+
 // Bootstrap
 
 @import "bootstrap.scss";
@@ -205,5 +209,86 @@ body{
 			color: $gray-lighter;
 		}
 	}
+
+	&__carousel{
+
+		position: relative;
+
+		&__img{
+
+			@include background-cover;
+			width: 742px;
+			height: 482px;
+		}
+
+		&__caption{
+			
+			&__number{
+
+				display: inline-block;
+				vertical-align: middle;
+				@include font($font-family-rare,normal,15px,$brand-primary);
+			}
+
+			&__title{
+
+				display: inline-block;
+				vertical-align: middle;
+				@include font($font-family-rare,normal,15px,$gray);
+
+			}
+
+			&__name{
+				@include font($font-family-seldom,normal,15px,$gray);
+				
+				&:before{
+					content:"\00ab";
+				};
+				
+				&:after{
+					content:"\00bb";
+				}
+			}
+		}
+	}
 		
+}
+
+// CAROUSEL DOTS
+
+.owl{
+
+	&-carousel{
+
+		&--custom{
+
+			position: absolute;
+    		top: 40px;
+    		right: -30px;
+		}
+	}
+
+	&-controls{
+		position: relative;
+	}
+
+	&-dots{
+		position: relative;
+		left:20px;
+		bottom:52px;
+	}
+
+	&-dot{
+
+		float:left;
+		height: 10px;
+		width: 10px;
+		background-color: $gray-lighter;
+		transition: all 0.3s;
+		@include margin-horizontal(10px, 0);
+		
+		&.active{
+			background-color: $brand-primary;
+		}
+	}
 }

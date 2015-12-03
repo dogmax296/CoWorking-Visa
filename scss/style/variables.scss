@@ -6,12 +6,14 @@ $font-weight-sub:            500;
 
 $font-family-ofthen:		'GothamPro';
 $font-family-rare:			'GothamPro-Light';
+$font-family-seldom:		'GothamPro-Medium';
 
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base:              #000 !default;
+$gray:                   #666 !default;
 $gray-light:             #999 !default;
 $gray-lighter:           lighten($gray-base, 100%) !default; // #fff
 
