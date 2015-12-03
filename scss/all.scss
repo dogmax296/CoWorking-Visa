@@ -25,10 +25,31 @@ body{
 	position: relative;
 }
 
+// HEADINGS
+
+.heading{
+
+	&__main{
+
+		@include font($font-family-main,$font-weight-main,40px,$brand-primary);
+	}
+
+	&__sub{
+
+		@include font($font-family-ofthen,normal,40px,$brand-primary);
+	}
+
+	&__small{
+
+		@include font($font-family-ofthen,normal,20px,$gray-base);
+		
+	}
+}
+
 // LOGO
 
 .logo{
-	float: left;
+	display: inline-block;
 	width: 318px;
 	position: relative;
 	
@@ -61,6 +82,10 @@ body{
 }
 
 // NAVIGATION
+
+.main-navbar{
+	display: inline-block;
+}
 
 .main-nav{
 
@@ -119,7 +144,7 @@ body{
 	
 	&__link{
 
-		@include font($font-family-rare,20px,$gray-base);
+		@include font($font-family-rare,normal,20px,$gray-base);
 		transition: all 0.3s;
 		&:after{
 			content:"";
@@ -131,4 +156,54 @@ body{
 		
 		
 	}
+}
+
+// MAIN
+
+.main{
+
+	&__border{
+
+		border: 1px solid $brand-success;
+		
+	}
+
+}
+
+// ABOUT
+
+.about{
+
+	&__text{
+
+		overflow:hidden;
+		@include font($font-family-main,$font-weight-main,15px,$gray-base);
+
+		&:before{
+		
+
+			content:" ";
+			float: left;
+			width: 7px;
+			height: 2px;
+			background-color: $gray-base;
+			
+		}
+
+	}
+
+	&__btn{
+
+		@include font($font-family-main,$font-weight-main,20px,$gray-base);
+		border: 1px solid $brand-primary;
+		border-radius: 0;
+		transition: all 0.3s;
+		&:hover,
+		&:focus{
+			border: 1px solid $brand-primary;
+			background-color: $brand-primary;
+			color: $gray-lighter;
+		}
+	}
+		
 }
