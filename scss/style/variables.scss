@@ -1,0 +1,27 @@
+// FONT
+
+$font-family-main:			'robotolight';
+$font-family-sub:			'robotomedium';
+$font-family-ofthen:		'GothamPro';
+$font-family-rare:			'GothamPro-Light';
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000 !default;
+$gray-light:             #999 !default; //
+$gray-lighter:           lighten($gray-base, 100%) !default; // #fff
+
+$brand-primary:         #33c6f4 !default; //
+
+
+
+ //== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              15 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         20px !default;

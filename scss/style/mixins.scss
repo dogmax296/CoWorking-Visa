@@ -1,0 +1,58 @@
+// BACKGROUND
+
+@mixin background-cover{
+	background: no-repeat center center;
+	background-size: cover;	
+}
+
+// FONT
+
+@mixin font($family,$size,$color,$text-transform){
+	font-family:$family;
+	font-size:$size;
+	color:$color;
+	text-transform: $text-transform;	
+}
+
+// PADDING
+
+@mixin padding-custom($padding-top, $padding-right, $padding-bottom, $padding-left){
+	padding-top: $padding-top;
+	padding-right: $padding-right;
+	padding-bottom: $padding-bottom;
+	padding-left:$padding-left;
+}
+
+@mixin padding-vertical($padding-vertical-top, $padding-vertical-bottom){
+
+	padding-top: $padding-vertical-top;	
+	padding-bottom: $padding-vertical-bottom;
+}
+
+@mixin padding-horizontal($padding-horizontal-right, $padding-horizontal-left){
+
+	padding-right: $padding-horizontal-right;
+	padding-left:$padding-horizontal-left;
+}
+
+
+// MARGIN
+
+@mixin margin-custom($margin-top, $margin-right, $margin-bottom, $margin-left){
+	margin-top: $margin-top;
+	margin-right: $margin-right;
+	margin-bottom: $margin-bottom;
+	margin-left:$margin-left;
+}
+
+@mixin margin-vertical($margin-vertical-top, $margin-vertical-bottom){
+
+	margin-top: $margin-vertical-top;	
+	margin-bottom: $margin-vertical-bottom;
+}
+
+@mixin margin-horizontal($margin-horizontal-right, $margin-horizontal-left){
+	
+	margin-right: $margin-horizontal-right;
+	margin-left:$margin-horizontal-left;
+}

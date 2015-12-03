@@ -1,0 +1,26 @@
+
+
+
+// Custom Variables and Mixins
+
+@import "style/variables.scss";
+@import "style/mixins.scss";
+
+// Fonts
+
+@import "font.scss";
+
+// Bootstrap
+
+@import "bootstrap.scss";
+
+
+body{
+	position: relative;
+}
+
+.wrapper{
+
+	margin:40px 50px;	
+}
+
