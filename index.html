@@ -40,18 +40,26 @@
 						<!-- START nav- -main -->
 
 						<ul class="nav nav-tabs main-nav" role="tablist">
+
+							<!-- START main-nav__item -->
 					      
-					      <li class="active main-nav__item">
+					      	<li class="active main-nav__item">
 
-					      	<a class="main-nav__link smoothclick" href="#about">О проекте</a>
+					      		<a class="main-nav__link smoothclick" href="#about">О проекте</a>
 
-					      </li>
+					      	</li>
 
-					      <li class="main-nav__item">
+					      	<!-- END main-nav__item -->
 
-					      	<a class="main-nav__link smoothclick" href="#participants">Участники проекта</a>
+					      	<!-- START main-nav__item -->
 
-					      </li>
+					      	<li class="main-nav__item">
+
+					      		<a class="main-nav__link smoothclick" href="#participants">Участники проекта</a>
+
+					      	</li>
+
+					      	<!-- END main-nav__item -->
 
 					    </ul>
 
@@ -64,6 +72,7 @@
 				</nav>
 
 				<!-- END nav -->
+
 			</header>
 
 			<!-- START main -->
@@ -72,7 +81,7 @@
 				
 				<!-- START container -->
 
-				<div class="container main__border">
+				<div class="container container--about">
 
 					<!-- START about -->
 
@@ -89,27 +98,46 @@
 								<!-- START about__content -->
 								
 								<div class="about__content">
+
+									<!-- START heading__main -->
 									
-									<h1 class="heading__main">О проекте</h1>
+									<h1 class="heading__main main__heading">О проекте</h1>
+
+									<!-- END heading__main -->
+
+									<!-- START about__text -->
 
 									<div class="about__text">
 
-										<p>
+										<!-- START about__text__item -->
+
+										<p class="about__text__item">
 										
 											Coworking Visa – это мультипаспорт всех резидентов  коворкингов-участников программы. для незабываемых путешествий по городам Украины и СНГ.
 
 										</p>
 
-										<p>
+										<!-- END about__text__item -->
+
+										<!-- START about__text__item -->
+
+										<p class="about__text__item">
 
 											Теперь, будучи во Львове, Киеве, Днепропетровске, Одессе или Минске, коворкеры будут  чувствовать себя еще комфортнее, потому что целый рабочий день они смогут  провести в одном из коворкингов-партнёров бесплатно!
 
 										</p>
 
+										<!-- END about__text__item -->
 
 									</div>
 
+									<!-- END about__text  -->
+
+									<!-- START about__btn -->
+
 									<a href="#participants" class="smoothclick btn about__btn">Посмотреть учасников проекта</a>
+
+									<!-- END about__btn -->
 									
 								</div>
 
@@ -249,58 +277,119 @@
 
 					<!-- END about -->
 
+				</div>
+
+				<!-- END container -->
+
+				<!-- START container -->
+
+				<div class="container  container--participants">
+
 					<!-- START participants -->
 
 					<div class="participants" id="participants">
+
+						<!-- START participants__header-->
 												
 						<div class="participants__header">
 
+							<!-- START row -->
+
 							<div class="row">
+
+								<!-- START col-lg-13 -->
 
 								<div class="col-lg-13 col-lg-offset-1">
 
+									<!-- START row -->
+
 									<div class="row">
+
+										<!-- START col-lg-6 -->
 
 										<div class="col-lg-6">
 
+											<!-- START participants__heading -->
+
 											<h2 class="heading__sub participants__heading">Учасники проекта</h2>
 
+											<!-- START participants__heading -->
+
 										</div>
+
+										<!-- END col-lg-6 -->
+
+										<!-- START col-lg-8 -->
 
 										<div class="col-lg-8 col-lg-offset-1">
 
+											<!-- START participants__checkboxes -->
+
 											<div class="participants__checkboxes">
+
+												<!-- START participants__form -->
 										
 												<form action="">
+
+													<!-- START participants__checkbox -->
 												
-													<input type="checkbox" name="city" value="kharkov" id="kharkov"><label for="kharkov">Харьков</label>
+													<input type="checkbox" name="city" value="kharkov" id="kharkov" class="participants__checkbox"><label for="kharkov" class="participants__label"><span class="participants__label__checkbox"></span>Харьков</label>
 
-													<input type="checkbox" name="city" value="kiev" id="kiev"><label for="kiev">Киев</label>
+													<!-- END participants__checkbox -->
 
-													<input type="checkbox" name="city" value="lvov" id="lvov"><label for="lvov">Львов</label>
+													<!-- START participants__checkbox -->
 
-													<input type="checkbox" name="city" value="odessa" id="odessa"><label for="odessa">Одесса</label>
+													<input type="checkbox" name="city" value="kiev" id="kiev" class="participants__checkbox"><label for="kiev" class="participants__label"><span class="participants__label__checkbox"></span>Киев</label>
 
-													<input type="checkbox" name="city" value="minsk" id="minsk"><label for="minsk">Минск</label>
+													<!-- END participants__checkbox -->
+
+													<!-- START participants__checkbox -->
+
+													<input type="checkbox" name="city" value="lvov" id="lvov" class="participants__checkbox"><label for="lvov" class="participants__label"><span class="participants__label__checkbox"></span>Львов</label>
+
+													<!-- END participants__checkbox -->
+
+													<!-- START participants__checkbox -->
+
+													<input type="checkbox" name="city" value="odessa" id="odessa" class="participants__checkbox"><label for="odessa" class="participants__label"><span class="participants__label__checkbox"></span>Одесса</label>
+
+													<!-- END participants__checkbox -->
+
+													<!-- START participants__checkbox -->
+
+													<input type="checkbox" name="city" value="minsk" id="minsk" class="participants__checkbox"><label for="minsk" class="participants__label"><span class="participants__label__checkbox"></span>Минск</label>
+
+													<!-- END participants__checkbox -->
 
 												</form>
 
+												<!-- START participants__form -->
+
 											</div>
+
+											<!-- START participants__checkboxes -->
 
 										</div>
 
+										<!-- END col-lg-8 -->
+
 									</div>
 
-									
-																
-									
-
-
+									<!-- END row -->
+																																		
 								</div>
+
+								<!-- END col-lg-13 -->
 								
 							</div>
+
+							<!-- END row -->
 																											
 						</div>
+
+						<!-- END participants__header-->
+
+						<!-- START participants__grid-->
 
 						<div class="participants__grid">
 							
@@ -356,7 +445,7 @@
 
 												<div class="participants__btn-holder">
 
-													<button class="btn participants__btn">Забронировать место</button>
+													<button class="btn participants__btn"  data-toggle="modal" data-target="#myModal">Забронировать место</button>
 
 												</div>
 
@@ -823,23 +912,304 @@
 							</div>
 
 						</div>
+
+						<!-- END participants__grid-->
 												
 					</div>
 
 					<!-- END participants -->
 
+					<!-- START modal -->
+
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+						<!-- START modal__wrapper -->
+
+						<div class="modal__wrapper">
+
+							<!-- START container -->
+
+							<div class="container">
+
+								<!-- START row -->
+
+								<div class="row">
+
+									<!-- START col-lg-7 -->
+
+									<div class="col-lg-7 col-lg-offset-4">
+
+										<!-- START modal__content-holder -->
+											
+										<div class="modal-dialog modal__content-holder" role="document">
+
+											<!-- START modal__content -->
+
+											<div class="modal-content modal__content participants__item participants__item--modal">
+
+												<!-- START modal-header -->
+
+												<div class="modal-header">
+
+												        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+												        <h3 class="heading__small">Забронировать место</h3>
+												        <h4 class="heading__small participants__item__heading">Impact Hub</h4>
+												        <h5 class="modal__city">г. Одесса</h5>
+
+												</div>
+
+												<!-- END modal-header -->
+
+												<!-- START container-fluid -->
+
+												<div class="container-fluid">
+
+													<!-- START row -->
+
+													<div class="row">
+
+														<!-- START col-lg-11 -->
+
+														<div class="col-lg-11 col-lg-offset-2">
+
+															<!-- START row -->
+
+															<div class="row">
+
+																<!-- START col-lg-15 -->
+
+																<div class="col-lg-15">
+
+																	<!-- START modal__form -->
+
+																	<form action="" class="modal__form">
+
+																		<!-- START modal__form__select-->
+
+																		<div class="modal__form__select">
+													
+																			<select name="coworking" class="modal__form__item">
+																				
+																				<option value="1">Option1</option>
+
+																				<option value="2">Option2</option>
+
+																				<option value="3">Option3</option>
+
+																				<option value="4">Option4</option>
+
+																			</select>
+
+																		</div>
+
+																		<!-- END modal__form__select-->
+
+																		<!-- START modal__form__tel -->
+
+																		<div class="modal__form__tel">
+
+																			<input type="text" class="modal__form__item">
+
+																		</div>
+
+																		<!-- END modal__form__tel-->
+
+																		<!-- START modal__form__email-->
+
+																		<div class="modal__form__email">
+
+																			<input type="email" class="modal__form__item">
+
+																		</div>
+
+																		<!-- END modal__form__email-->
+
+																		<!-- START modal__form__date-->
+
+																		<div class="modal__form__date">
+
+																			<!-- START modal__form__date__from-->
+
+																			<div class="modal__form__date__from">
+
+																				<label for="from">From</label>
+
+																				<input type="text" id="from" name="from">
+
+																			</div>
+
+																			<!-- END modal__form__date__from-->
+
+																			<!-- START modal__form__date__to-->
+
+																			<div class="modal__form__date__to">
+
+																				<label for="to">to</label>
+
+																				<input type="text" id="to" name="to">
+
+																			</div>
+
+																			<!-- END modal__form__date__to-->
+
+																		</div>
+
+																		<!-- END modal__form__date-->
+
+																		<button>Отправить заявку</button>
+																    	
+
+																    </form>
+
+																    <!-- START modal__form -->
+
+																</div>
+
+																<!-- END col-lg-15 -->
+
+															</div>
+
+															<!-- END row -->
+
+														</div>
+
+														<!-- END col-lg-11 -->
+
+													</div>
+
+													<!-- END row -->
+
+												</div>
+
+												<!-- END container-fluid -->
+
+											    
+											</div>
+
+											<!-- END modal__content -->
+
+										</div>
+
+										<!-- END modal__content -->
+
+									</div>
+
+									<!-- END col-lg-7 -->
+
+								</div>
+
+								<!-- END row -->
+								  	
+							</div>
+
+							<!-- END container -->
+
+						</div>
+
+						<!-- END modal__wrapper -->
+
+					</div>
+
+					<!-- END modal -->
+
 				</div>
 
 				<!-- END container -->
-
-
+				
 			</main>
 
 			<!-- END main -->
 
-			
-			
-			
+			<!-- START footer -->
+
+			<div class="footer">
+
+				<!-- START container -->
+				
+				<div class="container container--footer">
+
+					<!-- START footer__content -->
+
+					<div class="footer__content">
+
+						<!-- START row -->
+
+						<div class="row">
+
+							<!-- START col-lg-13 -->
+
+							<div class="col-lg-13 col-lg-offset-1">
+
+								<!-- START row -->
+
+								<div class="row">
+
+									<!-- START col-lg-7 -->
+
+									<div class="col-lg-7">
+										
+										<!-- START logo -->
+
+										<a class="logo logo--footer" href="#">
+											
+											<img class="logo-img img-responsive" src="images/logo.png">
+											<img class="logo-img--hover img-responsive"  src="images/logo-hover.png">
+
+										</a>
+
+										<!-- END logo -->
+
+									</div>
+
+									<!-- END col-lg-7 -->
+
+									<!-- START col-lg-7 -->
+
+									<div class="col-lg-7 col-lg-offset-1">
+
+										<!-- START footer__contacts -->
+
+										<div class="footer__contacts">
+										
+											<div>Техническая поддержка проекта:</div>
+
+											<div class="footer__contacts__email">info@coworking-visa.com</div>
+
+											<div class="footer__contacts__tel">380 (67) 725 02 31</div>
+
+										</div>
+
+										<!-- END footer__contacts -->
+
+									</div>
+
+									<!-- END col-lg-7 -->
+
+								</div>
+
+								<!-- END row -->
+
+							</div>
+
+							<!-- END  col-lg-13  -->
+
+						</div>
+
+						<!-- END row -->
+
+					</div>
+
+					<!-- END footer__content -->
+
+				</div>
+
+				<!-- END container -->
+
+			</div>
+
+			<!-- END footer -->
+									
 		</div>
 
 		<!-- END wrapper -->
@@ -853,7 +1223,10 @@
 		<!-- OWL CAROUSEL -->
 		<script src="js/owl.carousel.min.js"></script>
 
-		<!-- OWL CAROUSEL -->
+		<!-- JQUERY UI -->
+		<script src="js/jquery-ui.min.js"></script>
+
+		<!-- Main JS -->
 		<script src="js/main.js"></script>
 	   
 	</body>

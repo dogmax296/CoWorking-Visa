@@ -8,9 +8,17 @@
 
 @import "font.scss";
 
+
+
 // OWL carousel
 
 @import "owl.carousel.scss";
+
+// JQUERY UI
+
+@import "jquery-ui/jquery-ui.scss";
+@import "jquery-ui/jquery-ui.structure.scss";
+@import "jquery-ui/jquery-ui.theme.scss";
 
 // Bootstrap
 
@@ -30,6 +38,27 @@ body{
 	
 	background: url(../images/texture.png) repeat;
 	position: relative;
+}
+
+.container{
+
+	&--about{
+		border: 1px solid $brand-success;
+	}
+
+	&--participants{
+		@include margin-vertical(100px, 0);//temporary
+		border-top: 1px solid $brand-success;
+		border-right: 1px solid $brand-success;
+		border-left: 1px solid $brand-success;
+	}
+
+
+	&--footer{
+		border-right:1px solid $brand-success;
+		border-bottom:1px solid $brand-success;
+		border-left:1px solid $brand-success;
+	}
 }
 
 // HEADINGS
@@ -96,6 +125,11 @@ body{
 			transition: all 0.3s;
 		}
 	}
+
+	&--footer{
+
+		@include margin-vertical(20px, 0);
+	}
 	
 }
 
@@ -118,7 +152,7 @@ body{
 		display: inline-block;
 	    background: url(../images/texture.png) repeat;
 	    @include padding-custom(0, 15px, 20px, 0);
-	    z-index: 2000;
+	    z-index: 1000;
 	}
 	
 	.main-nav{
@@ -193,10 +227,10 @@ body{
 
 	@include padding-vertical(50px, 0);
 
-	&__border{
+	
 
-		border: 1px solid $brand-success;
-		
+	&__heading{
+		@include margin-vertical(55px, 60px);
 	}
 
 }
@@ -205,14 +239,19 @@ body{
 
 .about{
 
+	@include padding-vertical(0, 40px);
+
 	&__text{
 
 		overflow:hidden;
 		@include font($font-family-main,$font-weight-main,15px,$gray-base);
+		
+		&__item{
+			@include margin-vertical(0, 25px)
+		}
 
 		&:before{
 		
-
 			content:" ";
 			float: left;
 			width: 7px;
@@ -226,6 +265,7 @@ body{
 	&__btn{
 
 		@include font($font-family-main,$font-weight-main,20px,$gray-base);
+		@include margin-vertical(10px, 10px);
 		border: 1px solid $brand-primary;
 		border-radius: 0;
 		transition: all 0.3s;
@@ -250,6 +290,8 @@ body{
 		}
 
 		&__caption{
+
+			@include margin-custom(10px, 0, 0, 20px);
 			
 			&__number{
 
@@ -285,7 +327,7 @@ body{
 		&--custom{
 
 			position: absolute;
-    		top: 40px;
+    		top: 30px;
     		right: -30px;
 		}
 	}
@@ -297,7 +339,7 @@ body{
 	&-dots{
 		position: relative;
 		left:20px;
-		bottom:52px;
+		bottom:72px;
 	}
 
 	&-dot{
@@ -318,26 +360,121 @@ body{
 
 // PARTICIPANTS
 
+
+
 .participants{
 
-	margin-top:300px;
+	@include padding-vertical(60px, 0);
+	
+	
 	
 	&__heading{
-		margin:0;
+		@include margin-vertical(0, 40px);
 	}
 	
 	&__checkboxes{
+
 		float: right;
+		@include margin-vertical(20px, 0);
+		
 	}
+
+	&__checkbox{
+
+		position: absolute;
+		left:-9999px;						
+	}
+
+	&__label{
+
+		cursor:pointer;
+		@include font($font-family-main,$font-weight-main,20px,$gray-base);
+		transition: all 0.3s;
+		&:hover,
+		&:focus{
+
+			color: $brand-primary;
+			
+			.participants{
+
+				&__label{
+					
+					&__checkbox{
+
+						border: 1px solid $brand-primary;
+					}
+				}
+
+				
+			}
+		}
+		
+		
+
+		&__checkbox{
+			display: inline-block;
+			width:20px;
+			height:20px;
+			border: 1px solid $gray;
+			transition: all 0.3s;
+			position: relative;
+			
+			&:hover,
+			&:focus{
+
+				&:before,
+				&:after{
+					background-color: $gray;
+				}
+			}
+			
+			&:before{
+
+				content:"";
+				display: inline-block;
+				width: 22px;
+				height: 1px;
+				background-color: $brand-primary;
+				transform: rotate(45deg);
+				position: absolute;
+				top:9px;
+				left:-2px;
+				transition: all 0.3s;
+				// opacity:0;
+				
+				
+			}
+
+			&:after{
+				content:"";
+				display: inline-block;
+				width: 22px;
+				height: 1px;
+				background-color: $brand-primary;
+				transform: rotate(-45deg);
+				position: absolute;
+				top:9px;
+				left:-2px;
+				transition: all 0.3s;
+				// opacity:0;
+				
+			}
+		}
+	}
+
 	&__item{
 
 		border: 2px solid $gray-base;
 		transition: all 0.3s;
 		@include margin-vertical(0, 50px);
+		background: $gray-lighter;
+		@include padding-vertical(24px, 28px);
 		
 		&__heading{
+
+			@include margin-vertical(0, 25px);
 			@include quotes;
-			margin: 0;
+			
 			
 			&-holder{
 				text-align: center;
@@ -358,13 +495,26 @@ body{
 				}
 			}
 		}
+
+		&--modal{
+			padding: 0;
+			margin: 0;
+			
+			&:hover,
+			&:focus{
+				border: 2px solid $gray-base;
+				cursor:default;												
+			}
+		}
 	}
 
 	&__list{
+		list-style-type: none;
 
 		&__item{
 
 			@include font($font-family-main,$font-weight-main,20px,$gray-light);
+			@include margin-vertical(0, 25px);
 			
 			&__content{
 				color: $gray-base;
@@ -414,4 +564,115 @@ body{
 	}
 	
 	
+}
+
+// MODAL
+
+.modal{
+
+	background: url(../images/texture.png) repeat;
+	
+	&-header{
+
+		text-align: center;
+		border:none;
+	}
+
+	&__wrapper{
+		@include padding-custom(40px, 54px, 40px, 54px);
+	}
+
+	&__content{
+
+		box-shadow:none;		
+		border-radius: 0;
+	}
+
+	&__city{
+		@include font($font-family-rare,normal,20px,$gray-base);
+	}
+
+	&__form{
+
+		&__item{
+			width: 100%;
+		}
+
+		&__date{
+			
+			&__from{
+				width: 40%;
+				float: left;
+			}
+
+			&__to{
+				width: 40%;
+				float: right;
+			}
+		}
+		
+	}
+
+}
+
+.footer{
+
+	background-color: $gray-lighter;
+	
+	&__contacts{
+
+		@include font($font-family-main,$font-weight-main,20px,$gray-base);
+		float: right;
+		
+		&__email{
+
+			&:before{
+				content:"@:";
+				display: inline-block;
+				@include margin-horizontal(26px, 0);
+				color: $brand-primary;
+			}
+		}
+
+		&__tel{
+			&:before{
+				content:"тел.:";
+				display: inline-block;
+				@include margin-horizontal(8px, 0);
+				color: $brand-primary;
+			}
+		}
+	}
+
+	&__content{
+		@include padding-vertical(25px, 20px);
+	}
+}
+
+
+
+
+
+
+
+// RESPONSIVE FOR MODAL
+
+@media (min-width:$screen-sm){
+
+	.modal{
+
+		&__content{
+
+			&-holder{
+
+				width: auto;
+				margin:0;
+			}
+		}
+
+		&__content{
+		
+			box-shadow:none;
+		}
+	}
 }
