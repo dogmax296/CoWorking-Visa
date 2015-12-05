@@ -243,8 +243,9 @@ body{
 
 	&__text{
 
-		overflow:hidden;
+		position: relative;
 		@include font($font-family-main,$font-weight-main,15px,$gray-base);
+		@include padding-horizontal(0, 40px);
 		
 		&__item{
 			@include margin-vertical(0, 25px)
@@ -252,11 +253,13 @@ body{
 
 		&:before{
 		
-			content:" ";
-			float: left;
-			width: 7px;
+			content:" ";			
+			width: 20px;
 			height: 2px;
 			background-color: $gray-base;
+			position: absolute;
+			top: 6px;
+			left: 0;
 			
 		}
 
@@ -266,9 +269,12 @@ body{
 
 		@include font($font-family-main,$font-weight-main,20px,$gray-base);
 		@include margin-vertical(10px, 10px);
+		@include padding-custom(15px, 15px, 15px, 15px);
+		width: 100%;
 		border: 1px solid $brand-primary;
 		border-radius: 0;
 		transition: all 0.3s;
+		
 		&:hover,
 		&:active,
 		&:focus{
@@ -382,7 +388,12 @@ body{
 	&__checkbox{
 
 		position: absolute;
-		left:-9999px;						
+		left:-9999px;
+		
+		&-inline{
+
+			@include padding-horizontal(0, 10px);
+		}						
 	}
 
 	&__label{
@@ -390,34 +401,86 @@ body{
 		cursor:pointer;
 		@include font($font-family-main,$font-weight-main,20px,$gray-base);
 		transition: all 0.3s;
+		
+		
+		&:before{
+
+			content:"";
+			display: inline-block;			
+			width:20px;
+			height:20px;
+			border: 1px solid $gray;
+			transition: all 0.3s;
+			@include margin-horizontal(10px, 0);
+		}
+
+		&-checkbox{
+
+			position: absolute;
+		    left: 10px;
+		    top: 10px;
+		    @include padding-custom(10px, 10px, 10px, 10px);
+		    opacity:0;
+		    transition: all 0.3s;
+		    
+		    &:hover,
+		    &:focus{
+		    	
+		    	&:before,
+		    	&:after{
+		    		background-color: $gray;
+		    	}
+		    }
+
+			&:before{
+				content:"";
+				display: inline-block;
+				background-color: $brand-primary;
+				transition: all 0.3s;
+				width: 20px;
+				height: 1px;
+				transform: rotate(45deg);
+				position: absolute;
+				top:0;
+				left:0;
+			}
+
+			&:after{
+				content:"";
+				display: inline-block;
+				background-color: $brand-primary;
+				transition: all 0.3s;
+				width: 20px;
+				height: 1px;
+				transform: rotate(-45deg);
+				position: absolute;
+				top:0;
+				left:0;
+			}
+			
+
+		}
+
+		
+
 		&:hover,
 		&:focus{
 
 			color: $brand-primary;
 			
-			.participants{
+			&:before{
 
-				&__label{
-					
-					&__checkbox{
-
-						border: 1px solid $brand-primary;
-					}
-				}
-
-				
+				border: 1px solid $brand-primary;
 			}
+					
 		}
 		
 		
 
 		&__checkbox{
-			display: inline-block;
-			width:20px;
-			height:20px;
-			border: 1px solid $gray;
-			transition: all 0.3s;
-			position: relative;
+			
+			
+			
 			
 			&:hover,
 			&:focus{
@@ -515,6 +578,18 @@ body{
 
 			@include font($font-family-main,$font-weight-main,20px,$gray-light);
 			@include margin-vertical(0, 25px);
+			@include padding-horizontal(0, 20px);
+			position: relative;
+			
+			&:before{
+				content:" ";			
+				width: 10px;
+				height: 2px;
+				background-color: $gray-base;
+				position: absolute;
+				top: 8px;
+				left: 0;
+				}
 			
 			&__content{
 				color: $gray-base;
@@ -544,6 +619,7 @@ body{
 		border-radius:0;
 		box-shadow:none;
 		@include font($font-family-main,$font-weight-main,20px,$gray-base);
+		@include padding-custom(15px, 15px, 15px, 15px);
 		transition: all 0.3s;
 		
 		&:hover,
@@ -647,6 +723,13 @@ body{
 	&__content{
 		@include padding-vertical(25px, 20px);
 	}
+}
+
+// CHECkBOX TRICK
+
+input[type=checkbox].participants__checkbox:checked + .participants__label>.participants__label-checkbox{
+	
+	opacity:1;
 }
 
 
