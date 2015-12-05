@@ -32,25 +32,25 @@ $(document).ready(function(){
 });
 
 
-// DATEPICKER
 
-$(function() {
-    $( "#from" ).datepicker({
-      defaultDate: "+1w",
-      changeMonth: true,
-      numberOfMonths: 1,
-      onClose: function( selectedDate ) {
-        $( "#to" ).datepicker( "option", "minDate", selectedDate );
-      }
-    });
-    $( "#to" ).datepicker({
-      defaultDate: "+1w",
-      changeMonth: true,
-      numberOfMonths: 1,
-      onClose: function( selectedDate ) {
-        $( "#from" ).datepicker( "option", "maxDate", selectedDate );
-      }
-    });
-  });     
 
-        
+// CHOSEN FOR SELECT
+
+var config = {
+  '.chosen-select'           : {},
+  '.chosen-select-deselect'  : {allow_single_deselect:true},
+  '.chosen-select-no-single' : {disable_search_threshold:10},
+  '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+  '.chosen-select-width'     : {width:"95%"}
+}
+
+for (var selector in config) {
+    $(selector).chosen(config[selector]);
+}
+
+// MASK INPUT
+
+jQuery(function($){
+   $("#phone").mask("+380-(99)-999-99-99");
+   
+});

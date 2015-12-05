@@ -8,17 +8,15 @@
 
 @import "font.scss";
 
-
-
 // OWL carousel
 
 @import "owl.carousel.scss";
 
-// JQUERY UI
 
-@import "jquery-ui/jquery-ui.scss";
-@import "jquery-ui/jquery-ui.structure.scss";
-@import "jquery-ui/jquery-ui.theme.scss";
+
+// CHOSEN for SELECT
+
+@import "chosen.scss";
 
 // Bootstrap
 
@@ -28,8 +26,7 @@
 body{
 
 	position: relative;
-	// height:100%;
-	// overflow:hidden;
+	
 }
 
 .wrapper{
@@ -468,6 +465,7 @@ body{
 
 			color: $brand-primary;
 			
+			
 			&:before{
 
 				border: 1px solid $brand-primary;
@@ -550,13 +548,17 @@ body{
 			cursor:pointer;
 			
 			.participants{
+
 				&__btn{
 					
 					border: 1px solid $brand-primary;
 					background-color: $brand-primary;
 					color: $gray-lighter;
 				}
+
 			}
+
+			
 		}
 
 		&--modal{
@@ -576,7 +578,7 @@ body{
 
 		&__item{
 
-			@include font($font-family-main,$font-weight-main,20px,$gray-light);
+			@include font($font-family-main,$font-weight-main,15px,$gray-light); //font-size changed from 20px
 			@include margin-vertical(0, 25px);
 			@include padding-horizontal(0, 20px);
 			position: relative;
@@ -627,6 +629,7 @@ body{
 		&:focus{
 			outline:none;
 			box-shadow:none;
+			
 		}
 
 		&:active:focus{
@@ -648,10 +651,29 @@ body{
 
 	background: url(../images/texture.png) repeat;
 	
+	&__heading{
+		
+		&-main{
+
+			@include margin-vertical(0, 15px);
+		}
+
+		&-name{
+			@include margin-vertical(0, 15px);
+			color: $brand-primary;
+		}
+
+		&-city{
+			@include margin-vertical(0, 30px);
+			@include font($font-family-rare,normal,20px,$gray-base);
+		}
+	}
+	
 	&-header{
 
 		text-align: center;
 		border:none;
+		padding: 0;
 	}
 
 	&__wrapper{
@@ -662,33 +684,168 @@ body{
 
 		box-shadow:none;		
 		border-radius: 0;
+		@include padding-vertical(25px, 35px);
 	}
 
-	&__city{
-		@include font($font-family-rare,normal,20px,$gray-base);
-	}
-
+	
 	&__form{
 
 		&__item{
+
 			width: 100%;
+			color: $gray-base;
+			border: 1px solid $gray-dark;
+			@include margin-vertical(0, 20px);
+			
+			
+			&::-webkit-input-placeholder{color: $gray-base;};
+			&::-moz-placeholder{color: $gray-base;};
+			&:-moz-placeholder{color: $gray-base;};
+			&:-ms-input-placeholder{color: $gray-base;};
+			
+		}
+
+		&__label{
+			@include font($font-family-main,$font-weight-main,15px,$gray-dark);
+			@include margin-vertical(0, 10px);
 		}
 
 		&__date{
 			
 			&__from{
-				width: 40%;
+				width: 45%;
 				float: left;
 			}
 
 			&__to{
-				width: 40%;
+				width: 45%;
 				float: right;
 			}
 		}
 		
 	}
 
+	&__btn{
+
+		@include padding-custom(15px, 95px, 15px, 95px);
+		background-color: transparent;
+		border: 1px solid $gray-base;
+		@include font($font-family-main,$font-weight-main,20px,$gray-base);		
+		border-radius: 0;
+		transition: all 0.3s;
+		
+		&:hover,
+		&:focus{
+
+			@include padding-custom(15px, 30px, 15px, 30px);
+			border: 1px solid $brand-primary;
+			background-color: $brand-primary;
+			color: $gray-lighter;
+			
+		}
+	}
+
+	&__close{
+
+		position: absolute;
+		top: -9px;
+    	right: 19px;
+    	font-size: 40px;
+    	color: $gray-dark;
+    	transition: all 0.3s;
+    	outline :none;
+    	
+    	
+    	&:focus,
+    	&:active,
+    	&:hover{
+    		outline :none;
+    		color: $brand-primary;
+    		
+    	}
+		
+		&-holder{
+
+			position: relative;
+		}
+	}
+
+}
+
+// FORM
+
+
+
+.chosen{
+
+	&-container{
+
+		width: 100%!important;
+		
+		&-single{
+
+			.chosen{
+
+				&-single{
+
+					@include padding-custom(2px, 0, 3px, 8px);
+					@include font($font-family-main,$font-weight-main,15px,$gray-base);
+					height:auto;
+					border: 1px solid $gray-dark;
+					border-radius:0;
+					box-shadow:none;
+					background: transparent;
+					
+					div{
+
+						top: 7px;
+    					right: 10px;
+    					width: 13px;
+    					
+    					b{
+    						background-position: 0 0;
+    					}
+					}
+				}
+
+				&-drop{
+					border-radius: 0;
+				}
+
+				&-search{
+
+					display: none;
+				}
+			}
+		}
+
+		&-active{
+			&.chosen-with-drop{
+
+				.chosen-single{
+					background: transparent;
+				}
+			}
+		}
+		
+		
+
+
+		.chosen-results{
+			@include font($font-family-main,$font-weight-main,15px,$gray-base);
+			
+			li.active-results{
+
+				.highlighted{
+					background: transparent;
+				}
+			}
+		}
+
+		
+	}
+
+	
 }
 
 .footer{

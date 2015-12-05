@@ -971,11 +971,15 @@
 
 												<div class="modal-header">
 
-												        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												        <button type="button" class="close modal__close-holder" data-dismiss="modal" aria-label="Close">
 
-												        <h3 class="heading__small">Забронировать место</h3>
-												        <h4 class="heading__small participants__item__heading">Impact Hub</h4>
-												        <h5 class="modal__city">г. Одесса</h5>
+												        	<span class="modal__close" aria-hidden="true">&times;</span>
+
+												        </button>
+
+												        <h3 class="heading__small modal__heading-main">Забронировать место</h3>
+												        <h4 class="heading__small participants__item__heading  modal__heading-name">Impact Hub</h4>
+												        <h5 class="modal__heading-city">г. Одесса</h5>
 
 												</div>
 
@@ -1008,18 +1012,20 @@
 																		<!-- START modal__form__select-->
 
 																		<div class="modal__form__select">
+
+																			<label for="coworking" class="modal__form__label">Выберете коворкинг, резедентом которого вы являетесь</label>
 													
-																			<select name="coworking" class="modal__form__item">
-																				
-																				<option value="1">Option1</option>
+																			<select  data-placeholder="Выберете..." class="chosen-select" style="width:350px;" tabindex="2" required id="coworking">
+														                        <option value=""></option>
+														                        <option value="Spalah">Spalah</option>
+														                        <option value="Impact Hub">Impact Hub</option>
+														                        <option value="Chasopys">Часопис</option>
+														                        <option value="Spalah">Spalah</option>
+														                        <option value="Impact Hub">Impact Hub</option>
+														                        <option value="Chasopys">Часопис</option>
+														                        
 
-																				<option value="2">Option2</option>
-
-																				<option value="3">Option3</option>
-
-																				<option value="4">Option4</option>
-
-																			</select>
+														            		</select>
 
 																		</div>
 
@@ -1029,7 +1035,9 @@
 
 																		<div class="modal__form__tel">
 
-																			<input type="text" class="modal__form__item">
+																			<label for="phone" class="modal__form__label">Введите ваш контактный телефон</label>
+												
+																			<input type="text" id="phone" class="modal__form__item" placeholder="+380-(00)-000-00-00"  required>
 
 																		</div>
 
@@ -1039,7 +1047,9 @@
 
 																		<div class="modal__form__email">
 
-																			<input type="email" class="modal__form__item">
+																			<label for="phone" class="modal__form__label">Введите ваш email</label>
+
+																			<input type="email" class="modal__form__item"  placeholder="example@spalah.com" id="email"  required>
 
 																		</div>
 
@@ -1053,9 +1063,9 @@
 
 																			<div class="modal__form__date__from">
 
-																				<label for="from">From</label>
+																				<label for="from" class="modal__form__label">Укажите дату приезда</label>
 
-																				<input type="text" id="from" name="from">
+																				<input type="text" class="modal__form__item" id="from_date" name="from_date" required>
 
 																			</div>
 
@@ -1065,9 +1075,9 @@
 
 																			<div class="modal__form__date__to">
 
-																				<label for="to">to</label>
+																				<label for="to" class="modal__form__label">Укажите дату выезда</label>
 
-																				<input type="text" id="to" name="to">
+																				<input type="text" class="modal__form__item" id="to__date" name="to__date"   required>
 
 																			</div>
 
@@ -1077,7 +1087,11 @@
 
 																		<!-- END modal__form__date-->
 
-																		<button>Отправить заявку</button>
+																		<div class="participants__btn-holder">
+
+																			<button class="btn modal__btn">Отправить заявку</button>
+
+																		</div>
 																    	
 
 																    </form>
@@ -1237,14 +1251,20 @@
 		<!-- JQUERY -->		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+
 		<!-- BOOTSTRAP -->
 		<script src="js/bootstrap-dist.js"></script>
 
 		<!-- OWL CAROUSEL -->
 		<script src="js/owl.carousel.min.js"></script>
 
-		<!-- JQUERY UI -->
-		<script src="js/jquery-ui.min.js"></script>
+		
+
+		<!-- CHOSEN JS FOR SELECT -->
+		<script src="js/chosen.jquery.min.js"></script>
+
+		<!-- CHOSEN JS FOR SELECT -->
+		<script src="js/jquery.maskedinput.min.js"></script>
 
 		<!-- Main JS -->
 		<script src="js/main.js"></script>

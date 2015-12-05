@@ -13,6 +13,7 @@ $font-family-seldom:		'GothamPro-Medium';
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base:              #000 !default;
+$gray-dark:              #ccc !default;
 $gray:                   #666 !default;
 $gray-light:             #979797 !default;
 $gray-lighter:           lighten($gray-base, 100%) !default; // #fff
