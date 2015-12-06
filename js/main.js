@@ -33,7 +33,6 @@ $(document).ready(function(){
 
 
 
-
 // CHOSEN FOR SELECT
 
 var config = {
@@ -54,3 +53,30 @@ jQuery(function($){
    $("#phone").mask("+380-(99)-999-99-99");
    
 });
+
+// DATEPICKER
+
+$(function() {
+    $( "#from__date" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      onClose: function( selectedDate ) {
+        $( "#to" ).datepicker( "option", "minDate", selectedDate );
+      }
+    });
+    $( "#to__date" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 1,
+      onClose: function( selectedDate ) {
+        $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+      }
+    });
+  });
+
+// STICKY
+
+$(document).ready(function(){
+    $(".header").sticky({topSpacing:0});
+  });

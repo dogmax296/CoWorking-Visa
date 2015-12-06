@@ -31,7 +31,7 @@ body{
 
 .wrapper{
 
-	@include margin-custom(40px, 54px, 40px, 54px);
+	@include margin-custom(0, 54px, 40px, 54px); //changed top from 40px to 0
 	
 	background: url(../images/texture.png) repeat;
 	position: relative;
@@ -40,12 +40,14 @@ body{
 .container{
 
 	&--about{
-		border: 1px solid $brand-success;
+		border-right: 1px solid $brand-success;
+		border-left: 1px solid $brand-success;
+		border-bottom:1px solid $brand-success;
 	}
 
 	&--participants{
 		@include margin-vertical(100px, 0);//temporary
-		border-top: 1px solid $brand-success;
+		// border-top: 1px solid $brand-success;
 		border-right: 1px solid $brand-success;
 		border-left: 1px solid $brand-success;
 	}
@@ -83,10 +85,23 @@ body{
 
 .header{
 
-	position: absolute;
-    display: inline-block;
-    left: 20px;
-    top: 20px;
+	// position: absolute;
+ //    display: inline-block;
+ //    left: 20px;
+ //    top: 20px;
+ 
+ 		z-index:1500;
+ 
+ 	
+ 	background: url(../images/texture.png) repeat;
+ 	
+ 	&:before{
+
+	 	content:"";
+	 	display: block;
+	 	height: 40px;
+	 	background: #FFF;
+	 }
 }
 
 // LOGO
@@ -146,10 +161,22 @@ body{
 	
 	&-holder{
 
-		display: inline-block;
-	    background: url(../images/texture.png) repeat;
-	    @include padding-custom(0, 15px, 20px, 0);
-	    z-index: 1000;
+		// display: inline-block;
+	    // background: url(../images/texture.png) repeat;
+	 //    @include padding-custom(0, 15px, 20px, 0);
+	 //    z-index: 1000;
+	 display: inline-block;
+	 	
+	 	
+
+
+	 	&:after{
+	 		
+	 		content:"";
+	 		height: 1px;
+	 		background: $gray;
+	 		display: inline-block;
+	 	}
 	}
 	
 	.main-nav{
@@ -278,6 +305,7 @@ body{
 			border: 1px solid $brand-primary;
 			background-color: $brand-primary;
 			color: $gray-lighter;
+			box-shadow: none;
 		}
 	}
 
@@ -301,6 +329,7 @@ body{
 				display: inline-block;
 				vertical-align: middle;
 				@include font($font-family-rare,normal,15px,$brand-primary);
+				@include margin-horizontal(5px, 0);
 			}
 
 			&__title{
@@ -648,6 +677,8 @@ body{
 // MODAL
 
 .modal{
+	
+	z-index: 5000;
 
 	background: url(../images/texture.png) repeat;
 	
@@ -695,13 +726,18 @@ body{
 			width: 100%;
 			color: $gray-base;
 			border: 1px solid $gray-dark;
-			@include margin-vertical(0, 20px);
+			
 			
 			
 			&::-webkit-input-placeholder{color: $gray-base;};
 			&::-moz-placeholder{color: $gray-base;};
 			&:-moz-placeholder{color: $gray-base;};
 			&:-ms-input-placeholder{color: $gray-base;};
+			
+			&-holder{
+				@include margin-vertical(0, 20px);
+				
+			}
 			
 		}
 
@@ -711,6 +747,8 @@ body{
 		}
 
 		&__date{
+
+
 			
 			&__from{
 				width: 45%;
@@ -733,16 +771,22 @@ body{
 		@include font($font-family-main,$font-weight-main,20px,$gray-base);		
 		border-radius: 0;
 		transition: all 0.3s;
+		outline: none;
 		
+
 		&:hover,
+		&:active,
 		&:focus{
 
 			@include padding-custom(15px, 30px, 15px, 30px);
 			border: 1px solid $brand-primary;
 			background-color: $brand-primary;
 			color: $gray-lighter;
+			box-shadow: none;
+			
 			
 		}
+		
 	}
 
 	&__close{
@@ -824,21 +868,44 @@ body{
 
 				.chosen-single{
 					background: transparent;
+					
+					div{
+						b{
+							background-position: -12px 0;
+						}
+					}
 				}
 			}
 		}
 		
-		
+		.chosen-drop{
+			box-shadow:none;
+		}
 
 
 		.chosen-results{
 			@include font($font-family-main,$font-weight-main,15px,$gray-base);
 			
-			li.active-results{
+			li{
 
-				.highlighted{
+				&.highlighted{
 					background: transparent;
+					color: $brand-primary;
 				}
+			}
+		}
+
+		&.chosen-with-drop{
+			
+			.chosen-single{
+				border: 1px solid $brand-primary;
+				border-bottom: none;
+			}
+
+			.chosen-drop{
+				border: 1px solid $brand-primary;
+				border-top: none;
+				
 			}
 		}
 
@@ -847,6 +914,10 @@ body{
 
 	
 }
+
+
+
+// FOOTER
 
 .footer{
 
