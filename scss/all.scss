@@ -111,6 +111,7 @@ body{
 	vertical-align: top;
 	width: 318px;
 	position: relative;
+	@include margin-horizontal(0,20px);
 	
 	&:hover,
 	&:focus{
@@ -156,27 +157,29 @@ body{
 
 .main-nav{
 
+	position: relative;
 	margin-top:0;
 	border:none;
 	
+	&__border{
+		position: absolute;
+		height: 29px;
+		width:280px;
+		border-top: 1px solid $brand-success;
+		border-right: 1px solid $brand-success;
+		top: 50px;
+    	right: -284px;
+		
+	}
+	
 	&-holder{
 
-		// display: inline-block;
-	    // background: url(../images/texture.png) repeat;
-	 //    @include padding-custom(0, 15px, 20px, 0);
+		position: relative;
+	    @include padding-vertical(20px, 10px);
 	 //    z-index: 1000;
 	 display: inline-block;
-	 	
-	 	
-
-
-	 	&:after{
-	 		
-	 		content:"";
-	 		height: 1px;
-	 		background: $gray;
-	 		display: inline-block;
-	 	}
+	 background: url(../images/texture.png) repeat;
+	 		 		 	
 	}
 	
 	.main-nav{
@@ -187,6 +190,7 @@ body{
 			&:focus{
 				background-color: transparent;
 				color: $brand-primary;
+				
 				
 				&:after{
 					background: $brand-primary;
@@ -208,11 +212,13 @@ body{
 					color: $brand-primary;
 					border: none;
 					background-color: transparent;
+					
 					&:hover,
 					&:focus{
 						border: none;
 						background-color: transparent;
 						color: $brand-primary;
+						cursor:pointer;
 						
 					}
 
@@ -233,6 +239,7 @@ body{
 
 		@include font($font-family-rare,normal,20px,$gray-base);
 		transition: all 0.3s;
+		
 		&:after{
 			content:"";
 			display: block;
@@ -264,6 +271,8 @@ body{
 .about{
 
 	@include padding-vertical(0, 80px);
+	
+	
 
 	&__text{
 
@@ -295,14 +304,14 @@ body{
 		@include margin-vertical(10px, 10px);
 		@include padding-custom(15px, 15px, 15px, 15px);
 		width: 100%;
-		border: 1px solid $brand-primary;
+		border: 2px solid $brand-primary;
 		border-radius: 0;
 		transition: all 0.3s;
 		
 		&:hover,
 		&:active,
 		&:focus{
-			border: 1px solid $brand-primary;
+			border: 2px solid $brand-primary;
 			background-color: $brand-primary;
 			color: $gray-lighter;
 			box-shadow: none;
@@ -359,7 +368,7 @@ body{
 		&--custom{
 
 			position: absolute;
-    		top: 30px;
+    		top: 9px;
     		right: -30px;
 		}
 	}
@@ -397,6 +406,12 @@ body{
 .participants{
 
 	@include padding-vertical(60px, 0);
+	
+	&:before{
+		content:"";
+		display: block;
+		height: 65px;
+	}
 	
 	
 	
@@ -686,16 +701,16 @@ body{
 		
 		&-main{
 
-			@include margin-vertical(0, 15px);
+			@include margin-vertical(0, 10px);
 		}
 
 		&-name{
-			@include margin-vertical(0, 15px);
+			@include margin-vertical(0, 10px);
 			color: $brand-primary;
 		}
 
 		&-city{
-			@include margin-vertical(0, 30px);
+			@include margin-vertical(0, 20px);
 			@include font($font-family-rare,normal,20px,$gray-base);
 		}
 	}
@@ -726,6 +741,7 @@ body{
 			width: 100%;
 			color: $gray-base;
 			border: 1px solid $gray-dark;
+			@include padding-custom(10px, 9px, 10px, 9px);
 			
 			
 			
@@ -735,7 +751,7 @@ body{
 			&:-ms-input-placeholder{color: $gray-base;};
 			
 			&-holder{
-				@include margin-vertical(0, 20px);
+				@include margin-vertical(0, 15px);
 				
 			}
 			
@@ -743,7 +759,7 @@ body{
 
 		&__label{
 			@include font($font-family-main,$font-weight-main,15px,$gray-dark);
-			@include margin-vertical(0, 10px);
+			@include margin-vertical(0, 5px);
 		}
 
 		&__date{
@@ -818,8 +834,6 @@ body{
 
 // FORM
 
-
-
 .chosen{
 
 	&-container{
@@ -832,7 +846,7 @@ body{
 
 				&-single{
 
-					@include padding-custom(2px, 0, 3px, 8px);
+					@include padding-custom(8px, 9px, 8px, 9px);
 					@include font($font-family-main,$font-weight-main,15px,$gray-base);
 					height:auto;
 					border: 1px solid $gray-dark;
@@ -899,7 +913,7 @@ body{
 			
 			.chosen-single{
 				border: 1px solid $brand-primary;
-				border-bottom: none;
+				border-bottom:  1px solid transparent;
 			}
 
 			.chosen-drop{
@@ -911,9 +925,41 @@ body{
 
 		
 	}
-
 	
 }
+
+input.modal__form__item{
+
+	&:focus{
+
+		outline:none;
+		border-color:$brand-primary;
+	}
+}
+
+// DATEPICKER
+
+.datepickers{
+
+	&-container{
+
+		z-index: 6000;
+		
+	}
+
+	.datepicker{
+
+		&.-top-right-{
+			&.-from-top-{
+				@include font($font-family-main,$font-weight-main,15px,$gray-base);
+			}
+		}
+		box-shadow: none;
+		border-radius:0;
+	}
+}
+
+
 
 
 
@@ -959,6 +1005,7 @@ input[type=checkbox].participants__checkbox:checked + .participants__label>.part
 	
 	opacity:1;
 }
+
 
 
 

@@ -6,11 +6,22 @@
 		<title>Covisa</title>
 
 		<!-- CSS -->
-		<link rel="stylesheet" href="css/all.css">	
+		<link rel="stylesheet" href="css/datepicker.css">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/all.css">
+
+		
+		
+
+		<!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
 
 	</head>
 
-	<body  data-spy="scroll"  data-offset="140"  data-target="#main-navbar">
+	<body  data-spy="scroll"  data-offset="140"  data-target="#main-navbar" id="body">
 		
 		<!-- START wrapper -->
 
@@ -18,56 +29,64 @@
 
 			<header class="header">
 
+				<div></div>
+
 				<!-- START nav -->
 				
 				<nav  class="main-nav-holder">
 
-					<!-- START logo -->
+					<div class="main-nav">
 
-					<a class="logo" href="#">
-						
-						<img class="logo-img img-responsive" src="images/logo.png">
-						<img class="logo-img--hover img-responsive"  src="images/logo-hover.png">
+						<!-- START logo -->
 
-					</a>
+						<a class="logo" href="#">
+							
+							<img class="logo-img img-responsive" src="images/logo.png">
+							<img class="logo-img--hover img-responsive"  src="images/logo-hover.png">
 
-					<!-- END logo -->
+						</a>
 
-					<!-- START main-navbar -->
+						<!-- END logo -->
 
-					<div id="main-navbar" class="main-navbar">
+						<!-- START main-navbar -->
 
-						<!-- START nav- -main -->
+						<div id="main-navbar" class="main-navbar">
 
-						<ul class="nav nav-tabs main-nav" role="tablist">
+							<!-- START nav- -main -->
 
-							<!-- START main-nav__item -->
-					      
-					      	<li class="active main-nav__item">
+							<ul class="nav nav-tabs main-nav" role="tablist">
 
-					      		<a class="main-nav__link smoothclick" href="#main">О проекте</a>
+								<!-- START main-nav__item -->
+						      
+						      	<li class="active main-nav__item">
 
-					      	</li>
+						      		<a class="main-nav__link smoothclick" href="#body">О проекте</a>
 
-					      	<!-- END main-nav__item -->
+						      	</li>
 
-					      	<!-- START main-nav__item -->
+						      	<!-- END main-nav__item -->
 
-					      	<li class="main-nav__item">
+						      	<!-- START main-nav__item -->
 
-					      		<a class="main-nav__link smoothclick" href="#participants">Участники проекта</a>
+						      	<li class="main-nav__item">
 
-					      	</li>
+						      		<a class="main-nav__link smoothclick" href="#participants">Участники проекта</a>
 
-					      	<!-- END main-nav__item -->
+						      	</li>
 
-					    </ul>
+						      	<!-- END main-nav__item -->
 
-					    <!-- END nav- -main -->
+						    </ul>
+
+						    <!-- END nav- -main -->
+
+						</div>
+
+						<!-- END main-navbar -->
 
 					</div>
 
-					<!-- END main-navbar -->
+					<div class="main-nav__border"></div>
 					
 				</nav>
 
@@ -1017,7 +1036,7 @@
 
 																			<label for="coworking" class="modal__form__label">Выберете коворкинг, резедентом которого вы являетесь</label>
 													
-																			<select  data-placeholder="Выберете..." class="chosen-select" style="width:350px;" tabindex="2" required id="coworking">
+																			<select  data-placeholder="Выберете..." class="chosen-select" style="width:350px;" tabindex="2" required name="Coworking" id="coworking">
 														                        <option value=""></option>
 														                        <option value="Spalah">Spalah</option>
 														                        <option value="Impact Hub">Impact Hub</option>
@@ -1039,7 +1058,7 @@
 
 																			<label for="phone" class="modal__form__label">Введите ваш контактный телефон</label>
 												
-																			<input type="text" id="phone" class="modal__form__item" placeholder="+380-(00)-000-00-00"  required>
+																			<input type="text" id="phone" class="modal__form__item" placeholder="+380-(00)-000-00-00" name="phone"  required>
 
 																		</div>
 
@@ -1051,7 +1070,7 @@
 
 																			<label for="email" class="modal__form__label">Введите ваш email</label>
 
-																			<input type="email" class="modal__form__item"  placeholder="example@spalah.com" id="email"  required>
+																			<input type="email" class="modal__form__item"  placeholder="example@spalah.com" id="email" name="email" required>
 
 																		</div>
 
@@ -1067,7 +1086,7 @@
 
 																				<label for="from_date" class="modal__form__label">Укажите дату приезда</label>
 
-																				<input type="text" class="modal__form__item" id="from__date" name="from__date" required>
+																				<input type="text" class="modal__form__item" id="fromdate" name="from__date" required>
 
 																			</div>
 
@@ -1079,7 +1098,7 @@
 
 																				<label for="to__date" class="modal__form__label">Укажите дату выезда</label>
 
-																				<input type="text" class="modal__form__item" id="to__date" name="to__date"   required>
+																				<input type="text" class="modal__form__item" id="todate" name="to__date"   required>
 
 																			</div>
 
@@ -1270,7 +1289,8 @@
 		<script src="js/jquery.sticky.js"></script>
 
 		<!-- DATEPICKER -->
-		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/datepicker.min.js"></script>
+		
 
 		<!-- Main JS -->
 		<script src="js/main.js"></script>

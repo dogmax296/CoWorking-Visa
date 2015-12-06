@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
  
     $(".smoothclick").click(function(event){     
         event.preventDefault();
-        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
     });
 });
 
@@ -54,29 +54,33 @@ jQuery(function($){
    
 });
 
-// DATEPICKER
-
-$(function() {
-    $( "#from__date" ).datepicker({
-      defaultDate: "+1w",
-      changeMonth: true,
-      numberOfMonths: 1,
-      onClose: function( selectedDate ) {
-        $( "#to" ).datepicker( "option", "minDate", selectedDate );
-      }
-    });
-    $( "#to__date" ).datepicker({
-      defaultDate: "+1w",
-      changeMonth: true,
-      numberOfMonths: 1,
-      onClose: function( selectedDate ) {
-        $( "#from" ).datepicker( "option", "maxDate", selectedDate );
-      }
-    });
-  });
 
 // STICKY
 
 $(document).ready(function(){
     $(".header").sticky({topSpacing:0});
   });
+
+// DATEPICKER
+
+
+var $startdate = $('#fromdate'),
+  $enddate = $('#todate');
+
+  $startdate.datepicker({
+    language: 'ru',
+    onSelect: function (fd, date) {
+      $enddate.data('datepicker')
+        .update('minDate', date)
+    },
+    position: 'top right'
+  })
+
+  $enddate.datepicker({
+    language: 'ru',
+    onSelect: function (fd, date) {
+      $startdate.data('datepicker')
+        .update('maxDate', date)
+    },
+    position: 'top right'
+  })

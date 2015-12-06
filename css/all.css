@@ -4579,6 +4579,8 @@ body {
   vertical-align: top;
   width: 318px;
   position: relative;
+  margin-right: 0;
+  margin-left: 20px;
 }
 
 .logo:hover .logo-img,
@@ -4618,19 +4620,27 @@ body {
 }
 
 .main-nav {
+  position: relative;
   margin-top: 0;
   border: none;
 }
 
-.main-nav-holder {
-  display: inline-block;
+.main-nav__border {
+  position: absolute;
+  height: 29px;
+  width: 280px;
+  border-top: 1px solid #c6c6c6;
+  border-right: 1px solid #c6c6c6;
+  top: 50px;
+  right: -284px;
 }
 
-.main-nav-holder:after {
-  content: "";
-  height: 1px;
-  background: #666;
+.main-nav-holder {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 10px;
   display: inline-block;
+  background: url(../images/texture.png) repeat;
 }
 
 .main-nav .main-nav__link {
@@ -4659,6 +4669,7 @@ body {
   border: none;
   background-color: transparent;
   color: #33c6f4;
+  cursor: pointer;
 }
 
 .main-nav__item.active .main-nav__link:after {
@@ -4734,7 +4745,7 @@ body {
   padding-bottom: 15px;
   padding-left: 15px;
   width: 100%;
-  border: 1px solid #33c6f4;
+  border: 2px solid #33c6f4;
   border-radius: 0;
   -webkit-transition: all 0.3s;
           transition: all 0.3s;
@@ -4743,7 +4754,7 @@ body {
 .about__btn:hover,
 .about__btn:active,
 .about__btn:focus {
-  border: 1px solid #33c6f4;
+  border: 2px solid #33c6f4;
   background-color: #33c6f4;
   color: white;
   box-shadow: none;
@@ -4804,7 +4815,7 @@ body {
 
 .owl-carousel--custom {
   position: absolute;
-  top: 30px;
+  top: 9px;
   right: -30px;
 }
 
@@ -4836,6 +4847,12 @@ body {
 .participants {
   padding-top: 60px;
   padding-bottom: 0;
+}
+
+.participants:before {
+  content: "";
+  display: block;
+  height: 65px;
 }
 
 .participants__heading {
@@ -5116,18 +5133,18 @@ body {
 
 .modal__heading-main {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .modal__heading-name {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #33c6f4;
 }
 
 .modal__heading-city {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-family: "GothamPro-Light";
   font-weight: normal;
   font-size: 20px;
@@ -5158,6 +5175,10 @@ body {
   width: 100%;
   color: #000;
   border: 1px solid #ccc;
+  padding-top: 10px;
+  padding-right: 9px;
+  padding-bottom: 10px;
+  padding-left: 9px;
 }
 
 .modal__form__item::-webkit-input-placeholder {
@@ -5178,7 +5199,7 @@ body {
 
 .modal__form__item-holder {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .modal__form__label {
@@ -5187,7 +5208,7 @@ body {
   font-size: 15px;
   color: #ccc;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .modal__form__date__from {
@@ -5257,10 +5278,10 @@ body {
 }
 
 .chosen-container-single .chosen-single {
-  padding-top: 2px;
-  padding-right: 0;
-  padding-bottom: 3px;
-  padding-left: 8px;
+  padding-top: 8px;
+  padding-right: 9px;
+  padding-bottom: 8px;
+  padding-left: 9px;
   font-family: "Roboto";
   font-weight: 300;
   font-size: 15px;
@@ -5316,12 +5337,33 @@ body {
 
 .chosen-container.chosen-with-drop .chosen-single {
   border: 1px solid #33c6f4;
-  border-bottom: none;
+  border-bottom: 1px solid transparent;
 }
 
 .chosen-container.chosen-with-drop .chosen-drop {
   border: 1px solid #33c6f4;
   border-top: none;
+}
+
+input.modal__form__item:focus {
+  outline: none;
+  border-color: #33c6f4;
+}
+
+.datepickers-container {
+  z-index: 6000;
+}
+
+.datepickers .datepicker {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.datepickers .datepicker.-top-right-.-from-top- {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 15px;
+  color: #000;
 }
 
 .footer {
