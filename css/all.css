@@ -4687,11 +4687,6 @@ body {
           transition: all 0.3s;
 }
 
-.main {
-  padding-top: 50px;
-  padding-bottom: 0;
-}
-
 .main__heading {
   margin-top: 55px;
   margin-bottom: 60px;
@@ -4699,7 +4694,7 @@ body {
 
 .about {
   padding-top: 0;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 .about__text {

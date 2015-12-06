@@ -249,7 +249,7 @@ body{
 
 .main{
 
-	@include padding-vertical(50px, 0);
+	// @include padding-vertical(50px, 0);
 
 	
 
@@ -263,7 +263,7 @@ body{
 
 .about{
 
-	@include padding-vertical(0, 40px);
+	@include padding-vertical(0, 80px);
 
 	&__text{
 

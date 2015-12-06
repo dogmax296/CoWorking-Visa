@@ -22,12 +22,12 @@ $('.owl-carousel').owlCarousel({
 })
 
 // SMOOTH CLICK BTN
-$(document).ready(function(){
-    // плавное перемещение страницы к нужному блоку
-    $(".smoothclick").click(function () {
-        elementClick = $(this).attr("href");
-        destination = $(elementClick).offset().top;
-        $("body,html").animate({scrollTop: destination }, 800);
+
+jQuery(document).ready(function($) {
+ 
+    $(".smoothclick").click(function(event){     
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
     });
 });
 
