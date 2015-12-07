@@ -12,7 +12,9 @@
 
 @import "owl.carousel.scss";
 
+// Datepicker
 
+@import "datepicker.scss";
 
 // CHOSEN for SELECT
 
@@ -81,6 +83,90 @@ body{
 	}
 }
 
+// BTN
+
+.btn{
+
+	@include font($font-family-main,$font-weight-main,20px,$gray-base);
+	border-radius: 0;
+	transition: all 0.3s;
+
+	&--about{
+		
+		@include margin-vertical(10px, 10px);
+		@include padding-custom(15px, 15px, 15px, 15px);
+		width: 100%;
+		border: 2px solid $brand-primary;
+				
+		&:hover,
+		&:active,
+		&:focus{
+
+			border: 2px solid $brand-primary;
+			background-color: $brand-primary;
+			color: $gray-lighter;
+			box-shadow: none;
+		}
+	}
+
+	&--participants{
+		background-color: transparent;
+		border: 1px solid $gray-base;		
+		box-shadow:none;		
+		@include padding-custom(15px, 15px, 15px, 15px);
+				
+		&:hover,
+		&:active,
+		&:focus{
+			outline:none;
+			box-shadow:none;
+			
+		}
+
+		&:active:focus{
+
+			outline:none;
+		}
+		
+		&-holder{
+			text-align: center;
+		}
+	}
+
+	&--modal{
+
+		@include padding-custom(15px, 95px, 15px, 95px);
+		background-color: transparent;
+		border: 1px solid $gray-base;					
+		outline: none;
+		
+		&:hover,
+		&:active,
+		&:focus{
+
+			@include padding-custom(15px, 30px, 15px, 30px);
+			border: 1px solid $brand-primary;
+			background-color: $brand-primary;
+			color: $gray-lighter;
+			box-shadow: none;
+			outline: none!important;
+						
+		}
+	}
+
+	&--thank-you{
+		@include padding-custom(15px, 30px, 15px, 30px);
+		
+		
+		&:hover,
+		&:active,
+		&:focus{
+			@include padding-custom(15px, 15px, 15px, 15px);
+		}
+	}
+	
+}
+
 // HEADER
 
 .header{
@@ -142,6 +228,7 @@ body{
 	&--footer{
 
 		@include margin-vertical(20px, 0);
+		@include margin-horizontal(0,0);
 	}
 	
 }
@@ -272,15 +359,14 @@ body{
 
 	@include padding-vertical(0, 80px);
 	
-	
-
 	&__text{
 
 		position: relative;
 		@include font($font-family-main,$font-weight-main,15px,$gray-base);
 		@include padding-horizontal(0, 40px);
 		
-		&__item{
+		&-item{
+
 			@include margin-vertical(0, 25px)
 		}
 
@@ -295,65 +381,43 @@ body{
 			left: 0;
 			
 		}
-
 	}
-
-	&__btn{
-
-		@include font($font-family-main,$font-weight-main,20px,$gray-base);
-		@include margin-vertical(10px, 10px);
-		@include padding-custom(15px, 15px, 15px, 15px);
-		width: 100%;
-		border: 2px solid $brand-primary;
-		border-radius: 0;
-		transition: all 0.3s;
-		
-		&:hover,
-		&:active,
-		&:focus{
-			border: 2px solid $brand-primary;
-			background-color: $brand-primary;
-			color: $gray-lighter;
-			box-shadow: none;
-		}
-	}
-
+	
 	&__carousel{
 
 		position: relative;
 
-		&__img{
+		&-img{
 
 			@include background-cover;
 			width: 742px;
 			height: 482px;
 		}
 
-		&__caption{
+		&-caption{
 
-			@include margin-custom(10px, 0, 0, 20px);
-			
-			&__number{
+			@include margin-custom(10px, 0, 0, 20px);						
+		}
 
-				display: inline-block;
-				vertical-align: middle;
-				@include font($font-family-rare,normal,15px,$brand-primary);
-				@include margin-horizontal(5px, 0);
-			}
+		&-number{
 
-			&__title{
+			display: inline-block;
+			vertical-align: middle;
+			@include font($font-family-rare,normal,15px,$brand-primary);
+			@include margin-horizontal(5px, 0);
+		}
 
-				display: inline-block;
-				vertical-align: middle;
-				@include font($font-family-rare,normal,15px,$gray);
+		&-title{
 
-			}
+			display: inline-block;
+			vertical-align: middle;
+			@include font($font-family-rare,normal,15px,$gray);
+		}
 
-			&__name{
-				@include font($font-family-seldom,normal,15px,$gray);
-				@include quotes
-				
-			}
+		&-name{
+
+			@include font($font-family-seldom,normal,15px,$gray);
+			@include quotes				
 		}
 	}
 		
@@ -398,10 +462,7 @@ body{
 	}
 }
 
-
 // PARTICIPANTS
-
-
 
 .participants{
 
@@ -416,7 +477,9 @@ body{
 	
 	
 	&__heading{
+
 		@include margin-vertical(0, 40px);
+		float: left;
 	}
 	
 	&__checkboxes{
@@ -575,7 +638,7 @@ body{
 		background: $gray-lighter;
 		@include padding-vertical(24px, 28px);
 		
-		&__heading{
+		&-heading{
 
 			@include margin-vertical(0, 25px);
 			@include quotes;
@@ -588,19 +651,19 @@ body{
 
 		&:hover,
 		&:focus{
+
 			border: 2px solid $brand-primary;
 			cursor:pointer;
 			
-			.participants{
-
-				&__btn{
+			
+			.btn--participants{
 					
-					border: 1px solid $brand-primary;
-					background-color: $brand-primary;
-					color: $gray-lighter;
-				}
-
+				border: 1px solid $brand-primary;
+				background-color: $brand-primary;
+				color: $gray-lighter;
 			}
+
+			
 
 			
 		}
@@ -618,9 +681,10 @@ body{
 	}
 
 	&__list{
+
 		list-style-type: none;
 
-		&__item{
+		&-item{
 
 			@include font($font-family-main,$font-weight-main,15px,$gray-light); //font-size changed from 20px
 			@include margin-vertical(0, 25px);
@@ -628,6 +692,7 @@ body{
 			position: relative;
 			
 			&:before{
+
 				content:" ";			
 				width: 10px;
 				height: 2px;
@@ -635,57 +700,35 @@ body{
 				position: absolute;
 				top: 8px;
 				left: 0;
-				}
-			
-			&__content{
-				color: $gray-base;
-			}
+			}						
+		}
 
-			&__link{
+		&-content{
+				
+			color: $gray-base;
+		}
+
+		&-link{
+
+			border-bottom:1px dashed;
+			color: $brand-warning;
+				
+			&:hover,
+			&:focus,
+			&:active{
 
 				border-bottom:1px dashed;
 				color: $brand-warning;
-				
-				&:hover,
-				&:focus,
-				&:active{
-
-					border-bottom:1px dashed;
-					color: $brand-warning;
-					text-decoration: none;
-				}
+				text-decoration: none;
 			}
 		}
+
 	}
 
 	&__btn{
 
-		background-color: transparent;
-		border: 1px solid $gray-base;
-		border-radius:0;
-		box-shadow:none;
-		@include font($font-family-main,$font-weight-main,20px,$gray-base);
-		@include padding-custom(15px, 15px, 15px, 15px);
-		transition: all 0.3s;
 		
-		&:hover,
-		&:active,
-		&:focus{
-			outline:none;
-			box-shadow:none;
-			
-		}
-
-		&:active:focus{
-
-			outline:none;
-		}
-		
-		&-holder{
-			text-align: center;
-		}
-	}
-	
+	}	
 	
 }
 
@@ -694,7 +737,6 @@ body{
 .modal{
 	
 	z-index: 5000;
-
 	background: url(../images/texture.png) repeat;
 	
 	&__heading{
@@ -723,6 +765,7 @@ body{
 	}
 
 	&__wrapper{
+
 		@include padding-custom(40px, 54px, 40px, 54px);
 	}
 
@@ -732,9 +775,8 @@ body{
 		border-radius: 0;
 		@include padding-vertical(25px, 35px);
 	}
-
 	
-	&__form{
+	&-form{
 
 		&__item{
 
@@ -766,43 +808,16 @@ body{
 
 
 			
-			&__from{
+			&-from{
 				width: 45%;
 				float: left;
 			}
 
-			&__to{
+			&-to{
 				width: 45%;
 				float: right;
 			}
-		}
-		
-	}
-
-	&__btn{
-
-		@include padding-custom(15px, 95px, 15px, 95px);
-		background-color: transparent;
-		border: 1px solid $gray-base;
-		@include font($font-family-main,$font-weight-main,20px,$gray-base);		
-		border-radius: 0;
-		transition: all 0.3s;
-		outline: none;
-		
-
-		&:hover,
-		&:active,
-		&:focus{
-
-			@include padding-custom(15px, 30px, 15px, 30px);
-			border: 1px solid $brand-primary;
-			background-color: $brand-primary;
-			color: $gray-lighter;
-			box-shadow: none;
-			
-			
-		}
-		
+		}		
 	}
 
 	&__close{
@@ -856,7 +871,7 @@ body{
 					
 					div{
 
-						top: 7px;
+						top: 13px;
     					right: 10px;
     					width: 13px;
     					
@@ -959,10 +974,6 @@ input.modal__form__item{
 	}
 }
 
-
-
-
-
 // FOOTER
 
 .footer{
@@ -974,7 +985,7 @@ input.modal__form__item{
 		@include font($font-family-main,$font-weight-main,20px,$gray-base);
 		float: right;
 		
-		&__email{
+		&-email{
 
 			&:before{
 				content:"@:";
@@ -984,7 +995,8 @@ input.modal__form__item{
 			}
 		}
 
-		&__tel{
+		&-tel{
+
 			&:before{
 				content:"тел.:";
 				display: inline-block;
@@ -1006,11 +1018,43 @@ input[type=checkbox].participants__checkbox:checked + .participants__label>.part
 	opacity:1;
 }
 
+// THANK YOU PAGE
 
+.thank-you{
 
+	&__wrapper{
 
+		@include padding-vertical(40px,0);
+	}
 
+	&__content{
+		text-align: center;
+	}
 
+	&__item{
+		@include padding-vertical(40px,40px);
+	}
+
+	&-bg{
+		background: url(../images/texture.png) repeat;
+	}
+
+	&__heading{
+
+		color: $brand-primary;
+		@include margin-vertical(0, 70px);
+	}
+
+	&__text{
+
+		@include font($font-family-main,$font-weight-main,15px,$gray-base);
+		@include margin-vertical(0, 70px);
+		
+		&-holder{
+			text-align: left;
+		}
+	}
+}
 
 
 // RESPONSIVE FOR MODAL

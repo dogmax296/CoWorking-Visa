@@ -84,3 +84,5 @@ var $startdate = $('#fromdate'),
     },
     position: 'top right'
   })
+
+
