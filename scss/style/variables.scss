@@ -33,3 +33,10 @@ $brand-warning:         #3636fa !default;
 $grid-columns:              15 !default;
 //** Padding between columns. Gets divided in half for the left and right.
 $grid-gutter-width:         20px !default;
+
+//== Container sizes
+
+// Large screen / wide desktop
+$container-large-desktop:      (1160px + $grid-gutter-width) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;

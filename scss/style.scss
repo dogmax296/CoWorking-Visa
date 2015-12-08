@@ -33,13 +33,20 @@ body{
 
 .wrapper{
 
-	@include margin-custom(0, 54px, 40px, 54px); //changed top from 40px to 0
+	// @include margin-custom(40px, 54px, 40px, 54px);
+	@include margin-custom(0, auto, 40px, auto);
+	width: 1260px;
 	
 	background: url(../images/texture.png) repeat;
 	position: relative;
 }
 
 .container{
+
+	&--main{
+		border-right: 1px solid $brand-success;
+		border-left: 1px solid $brand-success;
+	}
 
 	&--about{
 		border-right: 1px solid $brand-success;
@@ -113,7 +120,7 @@ body{
 		background-color: transparent;
 		border: 1px solid $gray-base;		
 		box-shadow:none;		
-		@include padding-custom(15px, 15px, 15px, 15px);
+		@include padding-custom(10px, 14px, 10px, 14px);
 				
 		&:hover,
 		&:active,
@@ -135,7 +142,7 @@ body{
 
 	&--modal{
 
-		@include padding-custom(15px, 95px, 15px, 95px);
+		@include padding-custom(15px, 65px, 15px, 65px);
 		background-color: transparent;
 		border: 1px solid $gray-base;					
 		outline: none;
@@ -151,6 +158,11 @@ body{
 			box-shadow: none;
 			outline: none!important;
 						
+		}
+
+		&-holder{
+			@include padding-vertical(10px, 10px);
+			text-align: center;
 		}
 	}
 
@@ -196,8 +208,9 @@ body{
 	display: inline-block;
 	vertical-align: top;
 	width: 318px;
-	position: relative;
-	@include margin-horizontal(0,20px);
+	position: absolute;
+	left:-20px;
+	
 	
 	&:hover,
 	&:focus{
@@ -226,9 +239,11 @@ body{
 	}
 
 	&--footer{
-
+		float: left;
 		@include margin-vertical(20px, 0);
-		@include margin-horizontal(0,0);
+		position: relative;
+		left:0;
+		
 	}
 	
 }
@@ -239,7 +254,7 @@ body{
 
 	display: inline-block;
 	vertical-align: top;
-	@include margin-horizontal(0, 210px);
+	@include margin-horizontal(0, 508px);
 }
 
 .main-nav{
@@ -255,7 +270,7 @@ body{
 		border-top: 1px solid $brand-success;
 		border-right: 1px solid $brand-success;
 		top: 50px;
-    	right: -284px;
+    	right: -297px;
 		
 	}
 	
@@ -348,7 +363,7 @@ body{
 	
 
 	&__heading{
-		@include margin-vertical(55px, 60px);
+		@include margin-vertical(55px, 47px);
 	}
 
 }
@@ -357,7 +372,7 @@ body{
 
 .about{
 
-	@include padding-vertical(0, 80px);
+	// @include padding-vertical(0, 80px);
 	
 	&__text{
 
@@ -444,7 +459,7 @@ body{
 	&-dots{
 		position: relative;
 		left:20px;
-		bottom:72px;
+		bottom:62px;
 	}
 
 	&-dot{
@@ -471,14 +486,16 @@ body{
 	&:before{
 		content:"";
 		display: block;
-		height: 65px;
+		height: 55px;
 	}
 	
-	
+	&__header{
+		@include margin-horizontal(-29px, -29px);
+	}
 	
 	&__heading{
 
-		@include margin-vertical(0, 40px);
+		@include margin-vertical(0, 20px);
 		float: left;
 	}
 	
@@ -504,6 +521,7 @@ body{
 
 		cursor:pointer;
 		@include font($font-family-main,$font-weight-main,20px,$gray-base);
+		@include padding-horizontal(0, 30px);
 		transition: all 0.3s;
 		
 		
@@ -515,14 +533,17 @@ body{
 			height:20px;
 			border: 1px solid $gray;
 			transition: all 0.3s;
-			@include margin-horizontal(10px, 0);
+			position: absolute;
+		    left: 10px;
+		    bottom: 8px;
 		}
 
 		&-checkbox{
 
 			position: absolute;
 		    left: 10px;
-		    top: 10px;
+    		top: 14px;
+    		
 		    @include padding-custom(10px, 10px, 10px, 10px);
 		    opacity:0;
 		    transition: all 0.3s;
@@ -564,6 +585,8 @@ body{
 			
 
 		}
+
+		
 
 		
 
@@ -634,14 +657,15 @@ body{
 
 		border: 2px solid $gray-base;
 		transition: all 0.3s;
-		@include margin-vertical(0, 50px);
+		@include margin-custom(0, -25px, 50px, -25px);
 		background: $gray-lighter;
-		@include padding-vertical(24px, 28px);
+		@include padding-custom(25px, 25px, 25px, 25px);
 		
 		&-heading{
 
-			@include margin-vertical(0, 25px);
+			@include margin-vertical(0, 20px);
 			@include quotes;
+			transition: all 0.3s;
 			
 			
 			&-holder{
@@ -661,6 +685,10 @@ body{
 				border: 1px solid $brand-primary;
 				background-color: $brand-primary;
 				color: $gray-lighter;
+			}
+
+			.participants__item-heading{
+				color: $brand-primary;;
 			}
 
 			
@@ -683,11 +711,12 @@ body{
 	&__list{
 
 		list-style-type: none;
+		@include padding-horizontal(0, 0);
 
 		&-item{
 
-			@include font($font-family-main,$font-weight-main,15px,$gray-light); //font-size changed from 20px
-			@include margin-vertical(0, 25px);
+			@include font($font-family-main,$font-weight-main,20px,$gray-light); //font-size changed from 20px
+			@include margin-vertical(0, 20px);
 			@include padding-horizontal(0, 20px);
 			position: relative;
 			
@@ -698,7 +727,7 @@ body{
 				height: 2px;
 				background-color: $gray-base;
 				position: absolute;
-				top: 8px;
+				top: 11px;
 				left: 0;
 			}						
 		}
@@ -732,6 +761,14 @@ body{
 	
 }
 
+// CSS HACK MOZILLA 
+
+.participants__label-checkbox, x:-moz-any-link{
+
+	top:15px;
+			
+}
+
 // MODAL
 
 .modal{
@@ -762,18 +799,19 @@ body{
 		text-align: center;
 		border:none;
 		padding: 0;
+		position: relative;
 	}
 
 	&__wrapper{
 
-		@include padding-custom(40px, 54px, 40px, 54px);
+		@include margin-custom(20px, 54px, 20px, 54px);
 	}
 
 	&__content{
 
 		box-shadow:none;		
 		border-radius: 0;
-		@include padding-vertical(25px, 35px);
+		@include padding-vertical(20px, 20px);
 	}
 	
 	&-form{
@@ -793,8 +831,14 @@ body{
 			&:-ms-input-placeholder{color: $gray-base;};
 			
 			&-holder{
+
 				@include margin-vertical(0, 15px);
 				
+			}
+
+			&:focus{
+				outline:none;
+				border-color: $brand-primary;
 			}
 			
 		}
@@ -822,26 +866,32 @@ body{
 
 	&__close{
 
-		position: absolute;
-		top: -9px;
-    	right: 19px;
+		
     	font-size: 40px;
     	color: $gray-dark;
     	transition: all 0.3s;
     	outline :none;
     	
     	
-    	&:focus,
-    	&:active,
-    	&:hover{
-    		outline :none;
-    		color: $brand-primary;
-    		
-    	}
+    	
 		
 		&-holder{
 
-			position: relative;
+			position: absolute;
+			top: -9px;
+	    	right: 17px;
+	    	
+	    	&:focus,
+    		&:active,
+    		&:hover{
+
+    			outline :none;
+    			
+    			.modal__close{
+    				color: $brand-primary;
+    			}
+    		}
+			
 		}
 	}
 
@@ -1007,7 +1057,9 @@ input.modal__form__item{
 	}
 
 	&__content{
+
 		@include padding-vertical(25px, 20px);
+		@include margin-horizontal(-25px, -25px);
 	}
 }
 
@@ -1024,7 +1076,7 @@ input[type=checkbox].participants__checkbox:checked + .participants__label>.part
 
 	&__wrapper{
 
-		@include padding-vertical(40px,0);
+		@include margin-vertical(20px,20px);
 	}
 
 	&__content{

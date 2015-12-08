@@ -249,8 +249,8 @@
 .datepicker--pointer {
   position: absolute;
   background: #fff;
-  border-top: 1px solid #dbdbdb;
-  border-right: 1px solid #dbdbdb;
+  border-top: 1px solid $brand-primary;
+  border-right: 1px solid $brand-primary;
   width: 10px;
   height: 10px;
   z-index: -1;

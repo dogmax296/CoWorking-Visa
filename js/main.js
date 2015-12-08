@@ -86,3 +86,6 @@ var $startdate = $('#fromdate'),
   })
 
 
+// CHECKBOXES RESET
+$("#participants__checkboxes-form").trigger('reset');
+
