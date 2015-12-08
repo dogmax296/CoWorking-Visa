@@ -209,7 +209,7 @@ body{
 	vertical-align: top;
 	width: 318px;
 	position: absolute;
-	left:-20px;
+	left:-30px;
 	
 	
 	&:hover,
@@ -401,11 +401,12 @@ body{
 	&__carousel{
 
 		position: relative;
+		@include margin-horizontal(0, 13px);
 
 		&-img{
 
 			@include background-cover;
-			width: 742px;
+			width: 742px; //742
 			height: 482px;
 		}
 
@@ -434,6 +435,11 @@ body{
 			@include font($font-family-seldom,normal,15px,$gray);
 			@include quotes				
 		}
+	}
+
+	&__content{
+
+		@include margin-horizontal(0, -25px);
 	}
 		
 }
@@ -761,13 +767,6 @@ body{
 	
 }
 
-// CSS HACK MOZILLA 
-
-.participants__label-checkbox, x:-moz-any-link{
-
-	top:15px;
-			
-}
 
 // MODAL
 
@@ -775,6 +774,17 @@ body{
 	
 	z-index: 5000;
 	background: url(../images/texture.png) repeat;
+	
+	padding: 0!important; //
+
+	&:before{
+		content: '';
+		  display: inline-block;
+		  height: 4%;
+		  vertical-align: middle;
+		  margin-right: -4px;
+	}
+	
 	
 	&__heading{
 		
@@ -804,7 +814,9 @@ body{
 
 	&__wrapper{
 
-		@include margin-custom(20px, 54px, 20px, 54px);
+		// @include margin-custom(20px, 54px, 20px, 54px);
+		@include margin-custom(0, 54px, 0, 54px);
+
 	}
 
 	&__content{
@@ -812,6 +824,12 @@ body{
 		box-shadow:none;		
 		border-radius: 0;
 		@include padding-vertical(20px, 20px);
+		
+		&-holder{
+
+			display: inline-block;
+  			vertical-align: middle;
+		}
 	}
 	
 	&-form{
@@ -896,6 +914,7 @@ body{
 	}
 
 }
+
 
 // FORM
 
@@ -1063,12 +1082,6 @@ input.modal__form__item{
 	}
 }
 
-// CHECkBOX TRICK
-
-input[type=checkbox].participants__checkbox:checked + .participants__label>.participants__label-checkbox{
-	
-	opacity:1;
-}
 
 // THANK YOU PAGE
 
@@ -1109,6 +1122,8 @@ input[type=checkbox].participants__checkbox:checked + .participants__label>.part
 }
 
 
+
+
 // RESPONSIVE FOR MODAL
 
 @media (min-width:$screen-sm){
@@ -1129,4 +1144,26 @@ input[type=checkbox].participants__checkbox:checked + .participants__label>.part
 			box-shadow:none;
 		}
 	}
+}
+
+
+// CSS HACK MOZILLA 
+
+.participants__label-checkbox, x:-moz-any-link{
+
+	top:15px;
+			
+}
+
+.main__heading, x:-moz-any-link{
+
+	@include margin-vertical(55px, 42px);
+	
+}
+
+// CHECkBOX TRICK
+
+input[type=checkbox].participants__checkbox:checked + .participants__label>.participants__label-checkbox{
+	
+	opacity:1;
 }
