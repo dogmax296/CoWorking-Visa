@@ -778,11 +778,12 @@ body{
 	padding: 0!important; //
 
 	&:before{
+
 		content: '';
-		  display: inline-block;
-		  height: 4%;
-		  vertical-align: middle;
-		  margin-right: -4px;
+		display: inline-block;
+		height: 4%;
+		vertical-align: middle;
+		margin-right: -4px;
 	}
 	
 	
@@ -1089,7 +1090,16 @@ input.modal__form__item{
 
 	&__wrapper{
 
-		@include margin-vertical(20px,20px);
+		// @include margin-vertical(20px,20px);
+		
+		&:before{
+		
+			content: '';
+			display: inline-block;
+			height: 4%;
+			vertical-align: middle;
+			margin-right: -4px;
+		}
 	}
 
 	&__content{
@@ -1097,7 +1107,10 @@ input.modal__form__item{
 	}
 
 	&__item{
+
 		@include padding-vertical(40px,40px);
+		display: inline-block;
+  		vertical-align: middle;
 	}
 
 	&-bg{
