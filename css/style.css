@@ -5119,6 +5119,7 @@ body {
   background-color: #33c6f4;
   color: white;
   box-shadow: none;
+  outline: none;
 }
 
 .btn--participants {
@@ -5282,6 +5283,7 @@ body {
 .main-nav .main-nav__link:focus {
   background-color: transparent;
   color: #33c6f4;
+  outline: none;
 }
 
 .main-nav .main-nav__link:hover:after,
@@ -5485,7 +5487,12 @@ body {
 
 .participants__checkbox-inline {
   padding-right: 0;
-  padding-left: 10px;
+  padding-left: 0;
+}
+
+.participants__checkbox-inline + .participants__checkbox-inline {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .participants__label {
@@ -5495,7 +5502,7 @@ body {
   font-size: 20px;
   color: #000;
   padding-right: 0;
-  padding-left: 30px;
+  padding-left: 25px;
   -webkit-transition: all 0.3s;
           transition: all 0.3s;
 }
@@ -5509,13 +5516,13 @@ body {
   -webkit-transition: all 0.3s;
           transition: all 0.3s;
   position: absolute;
-  left: 10px;
+  left: 0;
   bottom: 8px;
 }
 
 .participants__label-checkbox {
   position: absolute;
-  left: 10px;
+  left: 0;
   top: 14px;
   padding-top: 10px;
   padding-right: 10px;
@@ -5705,6 +5712,16 @@ body {
   left: 0;
 }
 
+.participants__list-item--null {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.participants__list-item--big {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
 .participants__list-content {
   color: #000;
 }
@@ -5720,6 +5737,7 @@ body {
   border-bottom: 1px dashed;
   color: #3636fa;
   text-decoration: none;
+  outline: none;
 }
 
 .modal {

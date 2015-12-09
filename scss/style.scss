@@ -114,6 +114,7 @@ body{
 			background-color: $brand-primary;
 			color: $gray-lighter;
 			box-shadow: none;
+			outline:none;
 		}
 	}
 
@@ -288,6 +289,7 @@ body{
 			&:focus{
 				background-color: transparent;
 				color: $brand-primary;
+				outline:none;
 				
 				
 				&:after{
@@ -511,7 +513,11 @@ body{
 		
 		&-inline{
 
-			@include padding-horizontal(0, 10px);
+			@include padding-horizontal(0, 0);
+			
+			+.participants__checkbox-inline{
+				@include margin-horizontal(0, 0);
+			}
 		}						
 	}
 
@@ -519,7 +525,7 @@ body{
 
 		cursor:pointer;
 		@include font($font-family-main,$font-weight-main,20px,$gray-base);
-		@include padding-horizontal(0, 30px);
+		@include padding-horizontal(0, 25px);
 		transition: all 0.3s;
 		
 		
@@ -532,14 +538,14 @@ body{
 			border: 1px solid $gray;
 			transition: all 0.3s;
 			position: absolute;
-		    left: 10px;
+		    left: 0;
 		    bottom: 8px;
 		}
 
 		&-checkbox{
 
 			position: absolute;
-		    left: 10px;
+		    left: 0;
     		top: 14px;
     		
 		    @include padding-custom(10px, 10px, 10px, 10px);
@@ -727,7 +733,15 @@ body{
 				position: absolute;
 				top: 11px;
 				left: 0;
-			}						
+			}
+
+			&--null{
+				@include margin-vertical(0, 0);
+			}
+
+			&--big{
+				@include margin-vertical(0, 12px);
+			}					
 		}
 
 		&-content{
@@ -747,6 +761,7 @@ body{
 				border-bottom:1px dashed;
 				color: $brand-warning;
 				text-decoration: none;
+				outline:none;
 			}
 		}
 
@@ -1161,6 +1176,7 @@ input.modal__form__item{
 	@include margin-vertical(55px, 42px);
 	
 }
+
 
 // CHECkBOX TRICK
 
