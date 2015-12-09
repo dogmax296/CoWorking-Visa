@@ -28,12 +28,13 @@
 body{
 
 	position: relative;
+	background: url(../images/texture.png) repeat;
 	
 }
 
 .wrapper{
 
-	// @include margin-custom(40px, 54px, 40px, 54px);
+	
 	@include margin-custom(0, auto, 40px, auto);
 	width: 1260px;
 	
@@ -183,12 +184,7 @@ body{
 
 .header{
 
-	// position: absolute;
- //    display: inline-block;
- //    left: 20px;
- //    top: 20px;
- 
- 		z-index:1500;
+ 	z-index:1500;
  
  	
  	background: url(../images/texture.png) repeat;
@@ -198,7 +194,7 @@ body{
 	 	content:"";
 	 	display: block;
 	 	height: 40px;
-	 	background: #FFF;
+	 	// background: #FFF;
 	 }
 }
 
@@ -269,7 +265,7 @@ body{
 		width:280px;
 		border-top: 1px solid $brand-success;
 		border-right: 1px solid $brand-success;
-		top: 50px;
+		top: 51px;
     	right: -297px;
 		
 	}
@@ -358,12 +354,9 @@ body{
 
 .main{
 
-	// @include padding-vertical(50px, 0);
-
-	
-
 	&__heading{
-		@include margin-vertical(55px, 47px);
+
+		@include margin-vertical(55px, 58px);
 	}
 
 }
@@ -372,7 +365,6 @@ body{
 
 .about{
 
-	// @include padding-vertical(0, 80px);
 	
 	&__text{
 
@@ -382,7 +374,7 @@ body{
 		
 		&-item{
 
-			@include margin-vertical(0, 25px)
+			@include margin-vertical(0, 30px)
 		}
 
 		&:before{
@@ -406,7 +398,7 @@ body{
 		&-img{
 
 			@include background-cover;
-			width: 742px; //742
+			width: 674px; 
 			height: 482px;
 		}
 
@@ -773,9 +765,8 @@ body{
 .modal{
 	
 	z-index: 5000;
-	background: url(../images/texture.png) repeat;
-	
-	padding: 0!important; //
+	background: url(../images/texture.png) repeat;	
+	padding: 0!important;
 
 	&:before{
 
@@ -815,7 +806,6 @@ body{
 
 	&__wrapper{
 
-		// @include margin-custom(20px, 54px, 20px, 54px);
 		@include margin-custom(0, 54px, 0, 54px);
 
 	}
@@ -1089,8 +1079,6 @@ input.modal__form__item{
 .thank-you{
 
 	&__wrapper{
-
-		// @include margin-vertical(20px,20px);
 		
 		&:before{
 		
