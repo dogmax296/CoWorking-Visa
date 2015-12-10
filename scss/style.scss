@@ -122,7 +122,7 @@ body{
 		background-color: transparent;
 		border: 1px solid $gray-base;		
 		box-shadow:none;		
-		@include padding-custom(10px, 14px, 10px, 14px);
+		@include padding-custom(8px, 14px, 10px, 14px);
 				
 		&:hover,
 		&:active,
@@ -176,6 +176,60 @@ body{
 		&:active,
 		&:focus{
 			@include padding-custom(15px, 15px, 15px, 15px);
+		}
+	}
+
+	&--dropdown{
+
+		width: 100%;
+		text-align: left;
+		@include font($font-family-main,$font-weight-main,15px,darken($gray-dark, 50%));
+		background-color: transparent;
+		border: 1px solid $gray-dark;
+		transition: all 0.3s;
+		@include padding-custom(13px, 0, 17px, 14px);
+		position: relative;
+    	z-index: 500;
+		
+		
+		
+		&:hover,
+		&:active,
+		&:focus{
+			
+			outline:none!important;
+			border-color: $brand-primary;
+			box-shadow:none;
+			color: $gray-base;
+			
+			+.participants__dropdown-caret-holder{
+				border-color: $brand-primary;
+			}
+		}
+
+		
+		
+		
+		&-item{
+			
+			border:none;
+			transition: all 0.3s;
+			color:darken($gray-dark, 50%);
+			
+			&:hover,
+			&:active,
+			&:active{
+
+				box-shadow:none;
+				color: $brand-primary;
+			}
+
+			&.active{
+
+				box-shadow:none;
+				color:$brand-primary;
+			}
+
 		}
 	}
 	
@@ -274,7 +328,7 @@ body{
 	&-holder{
 
 		position: relative;
-	    @include padding-vertical(20px, 10px);
+	    @include padding-vertical(20px, 9px);
 	 //    z-index: 1000;
 	 display: inline-block;
 	 background: url(../images/texture.png) repeat;
@@ -395,12 +449,12 @@ body{
 	&__carousel{
 
 		position: relative;
-		@include margin-horizontal(0, 13px);
+		@include margin-horizontal(0, 10px);
 
 		&-img{
 
 			@include background-cover;
-			width: 674px; 
+			width: 677px; 
 			height: 482px;
 		}
 
@@ -433,7 +487,7 @@ body{
 
 	&__content{
 
-		@include margin-horizontal(0, -25px);
+		@include margin-horizontal(0, -28px);
 	}
 		
 }
@@ -489,185 +543,26 @@ body{
 		height: 55px;
 	}
 	
-	&__header{
-		@include margin-horizontal(-29px, -29px);
-	}
 	
 	&__heading{
 
 		@include margin-vertical(0, 20px);
-		float: left;
+		
 	}
 	
-	&__checkboxes{
-
-		float: right;
-		@include margin-vertical(20px, 0);
-		
-	}
-
-	&__checkbox{
-
-		position: absolute;
-		left:-9999px;
-		
-		&-inline{
-
-			@include padding-horizontal(0, 0);
-			
-			+.participants__checkbox-inline{
-				@include margin-horizontal(0, 0);
-			}
-		}						
-	}
-
-	&__label{
-
-		cursor:pointer;
-		@include font($font-family-main,$font-weight-main,20px,$gray-base);
-		@include padding-horizontal(0, 25px);
-		transition: all 0.3s;
-		
-		
-		&:before{
-
-			content:"";
-			display: inline-block;			
-			width:20px;
-			height:20px;
-			border: 1px solid $gray;
-			transition: all 0.3s;
-			position: absolute;
-		    left: 0;
-		    bottom: 8px;
-		}
-
-		&-checkbox{
-
-			position: absolute;
-		    left: 0;
-    		top: 14px;
-    		
-		    @include padding-custom(10px, 10px, 10px, 10px);
-		    opacity:0;
-		    transition: all 0.3s;
-		    
-		    &:hover,
-		    &:focus{
-		    	
-		    	&:before,
-		    	&:after{
-		    		background-color: $gray;
-		    	}
-		    }
-
-			&:before{
-				content:"";
-				display: inline-block;
-				background-color: $brand-primary;
-				transition: all 0.3s;
-				width: 20px;
-				height: 1px;
-				transform: rotate(45deg);
-				position: absolute;
-				top:0;
-				left:0;
-			}
-
-			&:after{
-				content:"";
-				display: inline-block;
-				background-color: $brand-primary;
-				transition: all 0.3s;
-				width: 20px;
-				height: 1px;
-				transform: rotate(-45deg);
-				position: absolute;
-				top:0;
-				left:0;
-			}
-			
-
-		}
-
-		
-
-		
-
-		&:hover,
-		&:focus{
-
-			color: $brand-primary;
-			
-			
-			&:before{
-
-				border: 1px solid $brand-primary;
-			}
-					
-		}
-		
-		
-
-		&__checkbox{
-			
-			
-			
-			
-			&:hover,
-			&:focus{
-
-				&:before,
-				&:after{
-					background-color: $gray;
-				}
-			}
-			
-			&:before{
-
-				content:"";
-				display: inline-block;
-				width: 22px;
-				height: 1px;
-				background-color: $brand-primary;
-				transform: rotate(45deg);
-				position: absolute;
-				top:9px;
-				left:-2px;
-				transition: all 0.3s;
-				// opacity:0;
-				
-				
-			}
-
-			&:after{
-				content:"";
-				display: inline-block;
-				width: 22px;
-				height: 1px;
-				background-color: $brand-primary;
-				transform: rotate(-45deg);
-				position: absolute;
-				top:9px;
-				left:-2px;
-				transition: all 0.3s;
-				// opacity:0;
-				
-			}
-		}
-	}
-
 	&__item{
 
 		border: 2px solid $gray-base;
 		transition: all 0.3s;
-		@include margin-custom(0, -25px, 50px, -25px);
+		@include margin-custom(0, 50px, 50px, 0);
 		background: $gray-lighter;
 		@include padding-custom(25px, 25px, 25px, 25px);
+		float:left;
+		width: 320px;
 		
 		&-heading{
 
-			@include margin-vertical(0, 20px);
+			@include margin-vertical(0, 15px);
 			@include quotes;
 			transition: all 0.3s;
 			
@@ -701,11 +596,15 @@ body{
 		}
 
 		&--modal{
+
 			padding: 0;
 			margin: 0;
+			float:none;
+			width: 100%;
 			
 			&:hover,
 			&:focus{
+
 				border: 2px solid $gray-base;
 				cursor:default;												
 			}
@@ -720,7 +619,7 @@ body{
 		&-item{
 
 			@include font($font-family-main,$font-weight-main,20px,$gray-light); //font-size changed from 20px
-			@include margin-vertical(0, 20px);
+			@include margin-vertical(0, 15px);
 			@include padding-horizontal(0, 20px);
 			position: relative;
 			
@@ -751,29 +650,100 @@ body{
 
 		&-link{
 
-			border-bottom:1px dashed;
-			color: $brand-warning;
+			border-bottom:1px dashed transparent;
+			color: $gray-base;
+			transition: all 0.3s;
 				
 			&:hover,
 			&:focus,
 			&:active{
 
-				border-bottom:1px dashed;
+				border-bottom:1px dashed $brand-warning;
 				color: $brand-warning;
 				text-decoration: none;
 				outline:none;
 			}
 		}
-
 	}
 
-	&__btn{
+	&__content{
 
+		@include padding-horizontal(0,60px);
+	}
+
+	&__grid{
+
+		clear:both;
+	}
+
+	&__dropdown{
+
+		@include margin-custom(4px,58px,0,0);
+		width: 320px;
+		position: relative;
 		
-	}	
+		
+		&-list{
+			
+			width: 100%;
+			border-radius:0;
+			margin:0;
+			padding:0;
+			border: 1px solid $brand-primary;
+			border-top:none;
+			background-color: $gray-lighter;
+			box-shadow:none;
+		}
+				
+		&.open{
+
+			background-color: $gray-lighter;
+			transition: all 0.3s;
+			
+			.btn--dropdown{
+
+				border-bottom:none;
+				border-color: $brand-primary;
+			}
+
+			.participants__dropdown-caret-holder{
+				border-bottom:none;
+				border-color: $brand-primary;
+			}
+
+			.participants__dropdown-caret{
+
+				background-position: -13px 0;
+			}
+
+		}
+
+		&-caret{
+			
+			background: url("../images/chosen-sprite.png") no-repeat 0px 0px;
+			border:none;
+			width: 12px;
+		    height: 12px;
+		    display: block;
+		    margin-top: 17px;
+		    margin-left: 33px;
+		    
+			&-holder{
+
+				height: 53px;
+    			width: 20%;
+    			transition: all 0.3s;
+    			position: absolute;
+			    right: 0;
+			    top: 0;
+			    z-index: 400;
+			    background: transparent;
+    			
+			}
+		}
+	}
 	
 }
-
 
 // MODAL
 
