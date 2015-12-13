@@ -29,6 +29,7 @@ body{
 
 	position: relative;
 	background: url(../images/texture.png) repeat;
+	@include padding-vertical(40px,0);
 	
 }
 
@@ -187,7 +188,7 @@ body{
 		background-color: transparent;
 		border: 1px solid $gray-dark;
 		transition: all 0.3s;
-		@include padding-custom(13px, 0, 17px, 14px);
+		@include padding-custom(16px, 0, 14px, 14px);
 		position: relative;
     	z-index: 500;
 		
@@ -244,13 +245,12 @@ body{
  	
  	background: url(../images/texture.png) repeat;
  	
- 	&:before{
+ // 	&:before{
 
-	 	content:"";
-	 	display: block;
-	 	height: 40px;
-	 	// background: #FFF;
-	 }
+	//  	content:"";
+	//  	display: block;
+	//  	height: 40px;
+	// }
 }
 
 // LOGO
@@ -535,7 +535,7 @@ body{
 
 .participants{
 
-	@include padding-vertical(60px, 0);
+	@include padding-vertical(20px, 0);
 	
 	&:before{
 		content:"";
@@ -693,6 +693,8 @@ body{
 			border-top:none;
 			background-color: $gray-lighter;
 			box-shadow:none;
+			opacity:0;
+			transition: all 0.4s;
 		}
 				
 		&.open{
@@ -716,6 +718,11 @@ body{
 				background-position: -13px 0;
 			}
 
+			.participants__dropdown-list{
+
+				opacity:1;
+			}
+
 		}
 
 		&-caret{
@@ -725,7 +732,7 @@ body{
 			width: 12px;
 		    height: 12px;
 		    display: block;
-		    margin-top: 17px;
+		    margin-top: 20px;
 		    margin-left: 33px;
 		    
 			&-holder{
@@ -789,11 +796,7 @@ body{
 		position: relative;
 	}
 
-	&__wrapper{
 
-		@include margin-custom(0, 54px, 0, 54px);
-
-	}
 
 	&__content{
 
@@ -802,9 +805,9 @@ body{
 		@include padding-vertical(20px, 20px);
 		
 		&-holder{
-
-			display: inline-block;
-  			vertical-align: middle;
+					
+  			width: 530px;
+  			margin:0 auto;
 		}
 	}
 	
@@ -819,10 +822,10 @@ body{
 			
 			
 			
-			&::-webkit-input-placeholder{color: $gray-base;};
-			&::-moz-placeholder{color: $gray-base;};
-			&:-moz-placeholder{color: $gray-base;};
-			&:-ms-input-placeholder{color: $gray-base;};
+			&::-webkit-input-placeholder{color: $gray-dark;};
+			&::-moz-placeholder{color: $gray-dark;};
+			&:-moz-placeholder{color: $gray-dark;};
+			&:-ms-input-placeholder{color: $gray-dark;};
 			
 			&-holder{
 
@@ -924,6 +927,11 @@ body{
     						background-position: 0 0;
     					}
 					}
+
+					span{
+
+						color: $gray-dark;
+					}
 				}
 
 				&-drop{
@@ -938,9 +946,11 @@ body{
 		}
 
 		&-active{
+
 			&.chosen-with-drop{
 
 				.chosen-single{
+
 					background: transparent;
 					
 					div{
@@ -948,7 +958,21 @@ body{
 							background-position: -12px 0;
 						}
 					}
+
+					span{
+
+						color: $gray-base;
+					}
 				}
+			}
+
+			.chosen-single{
+
+				span{
+
+					color: $gray-base;
+				}
+
 			}
 		}
 		
@@ -985,6 +1009,8 @@ body{
 
 		
 	}
+
+	
 	
 }
 
@@ -1116,14 +1142,7 @@ input.modal__form__item{
 
 	.modal{
 
-		&__content{
-
-			&-holder{
-
-				width: auto;
-				margin:0;
-			}
-		}
+		
 
 		&__content{
 		

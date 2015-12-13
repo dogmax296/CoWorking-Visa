@@ -49,7 +49,7 @@ for (var selector in config) {
 // MASK INPUT
 
 jQuery(function($){
-   $("#phone").mask("+380-(99)-999-99-99");
+   $(".phone").mask("+380-(99)-999-99-99");
    
 });
 
@@ -63,8 +63,8 @@ $(document).ready(function(){
 // DATEPICKER
 
 
-var $startdate = $('#fromdate'),
-  $enddate = $('#todate');
+var $startdate = $('.fromdate'),
+  $enddate = $('.todate');
 
   $startdate.datepicker({
     language: 'ru',
@@ -85,11 +85,10 @@ var $startdate = $('#fromdate'),
   })
 
 
-// CHECKBOXES RESET
-$("#participants__checkboxes-form").trigger('reset');
+// FORM RESET
+$(".modal-form").trigger('reset');
 
 // DROPDOWN CITY
-
 $(function(){
   
   $(".dropdown-menu li button").click(function(){
@@ -99,6 +98,8 @@ $(function(){
   });
 
 });
+
+// Items selector
 
 
 $(document).ready(function() {

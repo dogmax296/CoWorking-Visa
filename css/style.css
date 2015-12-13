@@ -5196,6 +5196,8 @@ button.close {
 body {
   position: relative;
   background: url(../images/texture.png) repeat;
+  padding-top: 40px;
+  padding-bottom: 0;
 }
 
 .wrapper {
@@ -5366,9 +5368,9 @@ body {
   border: 1px solid #ccc;
   -webkit-transition: all 0.3s;
           transition: all 0.3s;
-  padding-top: 13px;
+  padding-top: 16px;
   padding-right: 0;
-  padding-bottom: 17px;
+  padding-bottom: 14px;
   padding-left: 14px;
   position: relative;
   z-index: 500;
@@ -5411,12 +5413,6 @@ body {
 .header {
   z-index: 1500;
   background: url(../images/texture.png) repeat;
-}
-
-.header:before {
-  content: "";
-  display: block;
-  height: 40px;
 }
 
 .logo {
@@ -5668,7 +5664,7 @@ body {
 }
 
 .participants {
-  padding-top: 60px;
+  padding-top: 20px;
   padding-bottom: 0;
 }
 
@@ -5835,6 +5831,9 @@ body {
   border-top: none;
   background-color: white;
   box-shadow: none;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
 }
 
 .participants__dropdown.open {
@@ -5857,13 +5856,17 @@ body {
   background-position: -13px 0;
 }
 
+.participants__dropdown.open .participants__dropdown-list {
+  opacity: 1;
+}
+
 .participants__dropdown-caret {
   background: url("../images/chosen-sprite.png") no-repeat 0px 0px;
   border: none;
   width: 12px;
   height: 12px;
   display: block;
-  margin-top: 17px;
+  margin-top: 20px;
   margin-left: 33px;
 }
 
@@ -5920,13 +5923,6 @@ body {
   position: relative;
 }
 
-.modal__wrapper {
-  margin-top: 0;
-  margin-right: 54px;
-  margin-bottom: 0;
-  margin-left: 54px;
-}
-
 .modal__content {
   box-shadow: none;
   border-radius: 0;
@@ -5935,8 +5931,8 @@ body {
 }
 
 .modal__content-holder {
-  display: inline-block;
-  vertical-align: middle;
+  width: 530px;
+  margin: 0 auto;
 }
 
 .modal-form__item {
@@ -5950,19 +5946,19 @@ body {
 }
 
 .modal-form__item::-webkit-input-placeholder {
-  color: #000;
+  color: #ccc;
 }
 
 .modal-form__item::-moz-placeholder {
-  color: #000;
+  color: #ccc;
 }
 
 .modal-form__item:-moz-placeholder {
-  color: #000;
+  color: #ccc;
 }
 
 .modal-form__item:-ms-input-placeholder {
-  color: #000;
+  color: #ccc;
 }
 
 .modal-form__item-holder {
@@ -6050,6 +6046,10 @@ body {
   background-position: 0 0;
 }
 
+.chosen-container-single .chosen-single span {
+  color: #ccc;
+}
+
 .chosen-container-single .chosen-drop {
   border-radius: 0;
 }
@@ -6064,6 +6064,14 @@ body {
 
 .chosen-container-active.chosen-with-drop .chosen-single div b {
   background-position: -12px 0;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single span {
+  color: #000;
+}
+
+.chosen-container-active .chosen-single span {
+  color: #000;
 }
 
 .chosen-container .chosen-drop {
@@ -6191,10 +6199,6 @@ input.modal__form__item:focus {
 }
 
 @media (min-width: 768px) {
-  .modal__content-holder {
-    width: auto;
-    margin: 0;
-  }
   .modal__content {
     box-shadow: none;
   }
