@@ -20,6 +20,10 @@
 
 @import "chosen.scss";
 
+// Custom Scroll
+
+@import "jquery.mCustomScrollbar.scss";
+
 // Bootstrap
 
 @import "bootstrap.scss";
@@ -316,7 +320,7 @@ body{
 	
 	&__border{
 		position: absolute;
-		height: 29px;
+		height: 27px;
 		width:280px;
 		border-top: 1px solid $brand-success;
 		border-right: 1px solid $brand-success;
@@ -695,6 +699,8 @@ body{
 			box-shadow:none;
 			opacity:0;
 			transition: all 0.4s;
+			height: 267px;
+			overflow-y:auto;
 		}
 				
 		&.open{
@@ -822,10 +828,10 @@ body{
 			
 			
 			
-			&::-webkit-input-placeholder{color: $gray-dark;};
-			&::-moz-placeholder{color: $gray-dark;};
-			&:-moz-placeholder{color: $gray-dark;};
-			&:-ms-input-placeholder{color: $gray-dark;};
+			&::-webkit-input-placeholder{color: lighten($gray-base, 50%);};
+			&::-moz-placeholder{color: lighten($gray-base, 50%);};
+			&:-moz-placeholder{color: lighten($gray-base, 50%);};
+			&:-ms-input-placeholder{color: lighten($gray-base, 50%);};
 			
 			&-holder{
 
@@ -930,7 +936,7 @@ body{
 
 					span{
 
-						color: $gray-dark;
+						color: lighten($gray-base, 50%);
 					}
 				}
 
@@ -961,7 +967,7 @@ body{
 
 					span{
 
-						color: $gray-base;
+						color: lighten($gray-base, 50%);
 					}
 				}
 			}
@@ -1003,6 +1009,35 @@ body{
 			.chosen-drop{
 				border: 1px solid $brand-primary;
 				border-top: none;
+				height: 165px;
+    			overflow-y: auto;
+    			
+    			.mCSB_scrollTools{
+
+    				right: 9px;
+    				bottom: 10px;
+    				width: 12px;
+    				
+    				.mCSB_draggerContainer{
+
+				    	width: 12px;
+				    	
+				    	.mCSB_dragger{
+				    		
+				    		.mCSB_dragger_bar{
+
+				    			width: 12px;
+				    		}
+				    	}
+
+				    	.mCSB_draggerRail{
+
+				    		width: 12px;
+
+				    	}
+				    }
+
+    			}
 				
 			}
 		}
@@ -1043,6 +1078,87 @@ input.modal__form__item{
 		box-shadow: none;
 		border-radius:0;
 	}
+}
+
+// CUSTOM SCROLL
+
+.mCSB_inside{
+
+	> .mCSB_container{
+
+		margin-right: 48px
+	}
+}
+
+.mCS-dark.mCSB_scrollTools{
+
+	.mCSB_dragger{
+
+		.mCSB_dragger_bar{
+
+			background-color: $brand-primary;
+
+		}
+
+		&:hover,
+		&:active,
+		&:focus{
+
+			.mCSB_dragger_bar{
+
+				background-color: $brand-primary;
+
+			}
+		}
+	
+		&.mCSB_dragger_onDrag{
+
+			.mCSB_dragger_bar{
+
+				background-color: $brand-primary;
+
+			}
+			
+		}
+
+	}
+
+	.mCSB_draggerRail{
+		
+		background-color: lighten($brand-primary, 35%);
+	}
+
+}  
+
+.mCSB_scrollTools {
+
+	right: 14px;
+    bottom: 20px;
+    width: 20px;
+    
+    .mCSB_draggerContainer{
+
+    	width: 20px;
+    }
+
+	.mCSB_dragger{
+
+		height: 60px;
+		
+		.mCSB_dragger_bar{
+
+			border-radius:0;
+			width:20px;
+			
+		}
+	}
+
+	.mCSB_draggerRail{
+
+		border-radius:0;
+		width:20px;
+	}
+	
 }
 
 // FOOTER
