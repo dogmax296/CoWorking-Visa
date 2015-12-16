@@ -406,9 +406,11 @@ body{
 
 .main{
 
+	@include padding-horizontal(40px, 40px);
+
 	&__heading{
 
-		@include margin-vertical(55px, 58px);
+		@include margin-vertical(51px, 51px);
 	}
 
 }
@@ -444,14 +446,16 @@ body{
 	
 	&__carousel{
 
-		position: relative;
-		@include margin-horizontal(0, 10px);
+		// position: relative;
+		// @include margin-horizontal(0, 10px);
+		@include margin-horizontal(-31px, 40px);
+		
 
 		&-img{
 
 			@include background-cover;
-			width: 677px; 
-			height: 482px;
+			width: 678px; 
+			height: 480px;
 		}
 
 		&-caption{
@@ -496,9 +500,10 @@ body{
 
 		&--custom{
 
-			position: absolute;
-    		top: 9px;
-    		right: -30px;
+			// position: absolute;
+   //  		top: 9px;
+   //  		right: -30px;
+   
 		}
 	}
 
@@ -1135,6 +1140,7 @@ input.modal__form__item{
 .footer{
 
 	background-color: $gray-lighter;
+	@include padding-horizontal(40px, 40px);
 	
 	&__contacts{
 

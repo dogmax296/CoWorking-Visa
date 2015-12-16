@@ -7050,9 +7050,14 @@ body {
           transition: all 0.3s;
 }
 
+.main {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
 .main__heading {
-  margin-top: 55px;
-  margin-bottom: 58px;
+  margin-top: 51px;
+  margin-bottom: 51px;
 }
 
 .about__text {
@@ -7081,16 +7086,15 @@ body {
 }
 
 .about__carousel {
-  position: relative;
-  margin-right: 0;
-  margin-left: 10px;
+  margin-right: -31px;
+  margin-left: 40px;
 }
 
 .about__carousel-img {
   background: no-repeat center center;
   background-size: cover;
-  width: 677px;
-  height: 482px;
+  width: 678px;
+  height: 480px;
 }
 
 .about__carousel-caption {
@@ -7138,12 +7142,6 @@ body {
 .about__content {
   margin-right: 0;
   margin-left: -28px;
-}
-
-.owl-carousel--custom {
-  position: absolute;
-  top: 9px;
-  right: -30px;
 }
 
 .owl-controls {
@@ -7671,6 +7669,8 @@ input.modal__form__item:focus {
 
 .footer {
   background-color: white;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .footer__contacts {
