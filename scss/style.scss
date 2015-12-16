@@ -244,17 +244,9 @@ body{
 
 .header{
 
- 	z-index:1500;
- 
- 	
+ 	z-index:1500;	
  	background: url(../images/texture.png) repeat;
  	
- // 	&:before{
-
-	//  	content:"";
-	//  	display: block;
-	//  	height: 40px;
-	// }
 }
 
 // LOGO
@@ -638,13 +630,7 @@ body{
 				left: 0;
 			}
 
-			&--null{
-				@include margin-vertical(0, 0);
-			}
-
-			&--big{
-				@include margin-vertical(0, 12px);
-			}					
+							
 		}
 
 		&-content{
@@ -652,22 +638,7 @@ body{
 			color: $gray-base;
 		}
 
-		&-link{
-
-			border-bottom:1px dashed transparent;
-			color: $gray-base;
-			transition: all 0.3s;
-				
-			&:hover,
-			&:focus,
-			&:active{
-
-				border-bottom:1px dashed $brand-warning;
-				color: $brand-warning;
-				text-decoration: none;
-				outline:none;
-			}
-		}
+		
 	}
 
 	&__content{
@@ -699,8 +670,6 @@ body{
 			box-shadow:none;
 			opacity:0;
 			transition: all 0.4s;
-			height: 267px;
-			overflow-y:auto;
 		}
 				
 		&.open{

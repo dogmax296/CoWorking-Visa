@@ -133,12 +133,6 @@ $(document).ready(function() {
  (function($){
         $(window).load(function(){
 
-            $(".participants__dropdown-list").mCustomScrollbar({
-                theme:"dark",
-                autoDraggerLength:false,
-
-            });
-
             $(".chosen-drop").mCustomScrollbar({
                 theme:"dark",
                 autoDraggerLength:false,
