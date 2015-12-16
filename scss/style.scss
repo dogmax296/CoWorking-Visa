@@ -29,6 +29,11 @@
 @import "bootstrap.scss";
 
 
+html{
+
+	background: url(../images/texture.png) repeat;
+}
+
 body{
 
 	position: relative;
@@ -53,20 +58,6 @@ body{
 		border-right: 1px solid $brand-success;
 		border-left: 1px solid $brand-success;
 	}
-
-	&--about{
-		border-right: 1px solid $brand-success;
-		border-left: 1px solid $brand-success;
-		border-bottom:1px solid $brand-success;
-	}
-
-	&--participants{
-		@include margin-vertical(100px, 0);//temporary
-		// border-top: 1px solid $brand-success;
-		border-right: 1px solid $brand-success;
-		border-left: 1px solid $brand-success;
-	}
-
 
 	&--footer{
 		border-right:1px solid $brand-success;
@@ -236,8 +227,7 @@ body{
 			}
 
 		}
-	}
-	
+	}	
 }
 
 // HEADER
@@ -246,7 +236,7 @@ body{
 
  	z-index:1500;	
  	background: url(../images/texture.png) repeat;
- 	
+ 	@include padding-horizontal(40px, 40px);	
 }
 
 // LOGO
@@ -291,8 +281,7 @@ body{
 		position: relative;
 		left:0;
 		
-	}
-	
+	}	
 }
 
 // NAVIGATION
@@ -410,9 +399,8 @@ body{
 
 	&__heading{
 
-		@include margin-vertical(51px, 51px);
+		@include margin-vertical(59px, 58px);
 	}
-
 }
 
 // ABOUT
@@ -446,8 +434,6 @@ body{
 	
 	&__carousel{
 
-		// position: relative;
-		// @include margin-horizontal(0, 10px);
 		@include margin-horizontal(-31px, 40px);
 		
 
@@ -488,24 +474,12 @@ body{
 	&__content{
 
 		@include margin-horizontal(0, -28px);
-	}
-		
+	}		
 }
 
 // CAROUSEL DOTS
 
 .owl{
-
-	&-carousel{
-
-		&--custom{
-
-			// position: absolute;
-   //  		top: 9px;
-   //  		right: -30px;
-   
-		}
-	}
 
 	&-controls{
 		position: relative;
@@ -536,7 +510,12 @@ body{
 
 .participants{
 
-	@include padding-vertical(20px, 0);
+	@include padding-vertical(50px, 0);
+	
+	&__header{
+		
+		@include margin-vertical(0, 20px);
+	}
 	
 	&:before{
 		content:"";
@@ -545,21 +524,13 @@ body{
 	}
 	
 	
-	&__heading{
-
-		@include margin-vertical(0, 20px);
-		
-	}
-	
 	&__item{
 
 		border: 2px solid $gray-base;
 		transition: all 0.3s;
-		@include margin-custom(0, 50px, 50px, 0);
+		@include margin-custom(0, 0, 50px!important, 0);
 		background: $gray-lighter;
 		@include padding-custom(25px, 25px, 25px, 25px);
-		float:left;
-		width: 320px;
 		
 		&-heading{
 
@@ -619,7 +590,7 @@ body{
 
 		&-item{
 
-			@include font($font-family-main,$font-weight-main,20px,$gray-light); //font-size changed from 20px
+			@include font($font-family-main,$font-weight-main,20px,$gray-light);
 			@include margin-vertical(0, 15px);
 			@include padding-horizontal(0, 20px);
 			position: relative;
@@ -642,23 +613,25 @@ body{
 				
 			color: $gray-base;
 		}
-
 		
 	}
 
 	&__content{
 
-		@include padding-horizontal(0,60px);
+		@include padding-horizontal(60px, 60px);
 	}
 
 	&__grid{
 
 		clear:both;
+		
+		&-holder{
+			
+		}
 	}
 
 	&__dropdown{
 
-		@include margin-custom(4px,58px,0,0);
 		width: 320px;
 		position: relative;
 		
@@ -684,8 +657,9 @@ body{
 			
 			.btn--dropdown{
 
-				border-bottom:none;
+				
 				border-color: $brand-primary;
+				border-bottom:1px solid transparent;
 			}
 
 			.participants__dropdown-caret-holder{
@@ -728,8 +702,7 @@ body{
     			
 			}
 		}
-	}
-	
+	}	
 }
 
 // MODAL
@@ -799,6 +772,7 @@ body{
 			color: $gray-base;
 			border: 1px solid $gray-dark;
 			@include padding-custom(10px, 9px, 10px, 9px);
+			border-radius:0;
 			
 			
 			
@@ -871,13 +845,16 @@ body{
 			
 		}
 	}
-
 }
 
 
 // FORM
 
 .chosen{
+
+	&-select{
+		width:100%!important;
+	}
 
 	&-container{
 
@@ -1015,12 +992,16 @@ body{
 				
 			}
 		}
-
 		
-	}
+	}		
+}
 
-	
-	
+select.chosen-select{
+
+	background-color: $gray-lighter;
+	color: $gray-base;
+	border-color:$gray-dark;
+	border-radius:0;
 }
 
 input.modal__form__item{
@@ -1106,9 +1087,7 @@ input.modal__form__item{
 
 .mCSB_scrollTools {
 
-	right: 14px;
     bottom: 20px;
-    width: 20px;
     
     .mCSB_draggerContainer{
 
@@ -1175,7 +1154,6 @@ input.modal__form__item{
 	}
 }
 
-
 // THANK YOU PAGE
 
 .thank-you{
@@ -1199,8 +1177,10 @@ input.modal__form__item{
 	&__item{
 
 		@include padding-vertical(40px,40px);
-		display: inline-block;
+		// display: inline-block;
   		vertical-align: middle;
+  		width: 530px;
+  		margin: 0 auto;
 	}
 
 	&-bg{
@@ -1224,16 +1204,11 @@ input.modal__form__item{
 	}
 }
 
-
-
-
 // RESPONSIVE FOR MODAL
 
 @media (min-width:$screen-sm){
 
 	.modal{
-
-		
 
 		&__content{
 		
@@ -1242,21 +1217,22 @@ input.modal__form__item{
 	}
 }
 
-
 // CSS HACK MOZILLA 
 
 .participants__label-checkbox, x:-moz-any-link{
 
-	top:15px;
-			
+	top:15px;			
 }
 
 .main__heading, x:-moz-any-link{
 
-	@include margin-vertical(55px, 42px);
-	
+	@include margin-vertical(55px, 42px);	
 }
 
+.main-nav__border, x:-moz-any-link{
+
+	height:28px;
+}
 
 // CHECkBOX TRICK
 
