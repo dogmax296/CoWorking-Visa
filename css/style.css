@@ -7484,6 +7484,10 @@ body {
   color: #33c6f4;
 }
 
+.modal__coworking-from {
+  display: none;
+}
+
 .chosen-select {
   width: 100% !important;
 }
